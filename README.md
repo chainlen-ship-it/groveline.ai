@@ -88,36 +88,68 @@ npm start
 
 ## 🚢 Deployment
 
-### GitHub Pages Setup
+### Quick Deploy Workflow (Recommended)
+
+When you make content changes, use the automated deploy script:
+
+\`\`\`bash
+# 1. Make your edits to files in frontend/app/
+# 2. Run the deploy script
+./deploy.sh
+
+# 3. Review what changed
+git status
+
+# 4. Commit your changes
+git commit -m "Update content"
+
+# 5. Push to GitHub
+git push origin main
+\`\`\`
+
+**What `deploy.sh` does:**
+- Builds the Next.js site (`npm run build`)
+- Copies static files from `frontend/out/*` to repository root
+- Stages all changes (`git add -A`)
+- Leaves you ready to commit and push
+
+### Manual Deployment Steps
+
+If you prefer to deploy manually:
 
 1. **Build the static site:**
    \`\`\`bash
    cd frontend
    npm run build
+   cd ..
    \`\`\`
-   This creates the `out/` directory with static files.
 
-2. **Push to GitHub:**
+2. **Copy build output to root:**
    \`\`\`bash
-   git add .
-   git commit -m "Deploy to GitHub Pages"
+   cp -r frontend/out/* .
+   \`\`\`
+
+3. **Commit and push:**
+   \`\`\`bash
+   git add -A
+   git status
+   git commit -m "Your commit message"
    git push origin main
    \`\`\`
 
-3. **Configure GitHub Pages:**
-   - Go to Settings → Pages
-   - Source: Deploy from branch `main`
-   - Folder: `/frontend/out` or configure GitHub Actions
+### GitHub Pages Configuration
 
-4. **DNS Configuration (GoDaddy):**
-   - Add A records for `@`:
-     - `185.199.108.153`
-     - `185.199.109.153`
-     - `185.199.110.153`
-     - `185.199.111.153`
-   - Add CNAME for `www` → `groveline.ai`
+- **Repository:** [github.com/yourusername/groveline.ai](https://github.com)
+- **Source:** Deploy from branch `main`, root directory `/`
+- **Custom Domain:** `groveline.ai` (configured via `CNAME` file)
+- **Files:** `.nojekyll` prevents Jekyll processing
 
-5. **Enable HTTPS in GitHub Pages settings**
+### DNS Configuration (GoDaddy)
+
+Already configured:
+- A records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- CNAME for `www` → `groveline.ai`
+- HTTPS enabled in GitHub Pages settings
 
 ---
 
