@@ -10,7 +10,7 @@ export default function HomePage() {
           Institutional Readiness, Policy Refresh & SaaS Implementations
         </h1>
         <p className="max-w-[860px] mx-auto text-base md:text-lg text-[var(--muted)] mb-8">
-          Fractional leadership and project delivery for emerging and mid-sized managers — plus vendor-side implementation support.
+          Fractional leadership and project delivery for emerging and mid-sized managers, plus vendor-side implementation support.
           Allocator-ready operations at realistic budgets.
         </p>
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
@@ -45,7 +45,7 @@ export default function HomePage() {
           <div className="forest-card p-6">
             <span className="forest-badge">Allocator Lens</span>
             <h3 className="text-xl md:text-2xl font-bold mt-3 mb-2">300+ ODD reviews</h3>
-            <p className="text-[var(--muted)]">What passes and why — built into your ops.</p>
+            <p className="text-[var(--muted)]">What passes and why, built into your ops.</p>
           </div>
           <div className="forest-card p-6">
             <span className="forest-badge">Launches</span>
@@ -55,7 +55,7 @@ export default function HomePage() {
           <div className="forest-card p-6">
             <span className="forest-badge">Automation</span>
             <h3 className="text-xl md:text-2xl font-bold mt-3 mb-2">Ops that scale</h3>
-            <p className="text-[var(--muted)]">Python/SQL to remove manual recs & approvals.</p>
+            <p className="text-[var(--muted)]">Python/SQL to remove manual recs and approvals.</p>
           </div>
         </div>
       </section>

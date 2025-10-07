@@ -13,7 +13,7 @@ export default function CaseStudiesPage() {
         Case Studies & Insights
       </h1>
       <p className="text-center text-[var(--muted)] mb-12 max-w-3xl mx-auto">
-        Real examples of balancing institutional rigor with pragmatic execution —
+        Real examples of balancing institutional rigor with pragmatic execution,
         helping managers get allocator-ready without the overhead.
       </p>
 
