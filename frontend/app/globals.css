@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest: #228B22;
+  --grove: #2c5f2d;
+  --sage: #8FBC8F;
+  --mist: #e8f5e8;
+  --morning: #f0f7f0;
+  --ink: #102414;
+  --panel: #ffffff;
+  --border: #cfe5cf;
+  --muted: #3d5a42;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --morning: #0f1511;
+    --ink: #eaf3ea;
+    --panel: #0f1410;
+    --border: #243a28;
+    --muted: #a7c1ae;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, var(--morning), var(--mist));
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #2b6c3f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Custom utility classes for forest theme */
+.forest-gradient {
+  background: linear-gradient(135deg, var(--morning), var(--mist));
+}
+
+.forest-button-gradient {
+  background: linear-gradient(135deg, var(--forest), #3aa53a);
+}
+
+.forest-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(34, 139, 34, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  .forest-card {
+    box-shadow: 0 10px 30px rgba(34, 139, 34, 0.25);
+  }
+}
+
+.forest-badge {
+  display: inline-block;
+  background: #eaf6ea;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--grove);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .forest-badge {
+    background: rgba(143, 188, 143, 0.15);
+    color: var(--sage);
+  }
+}
