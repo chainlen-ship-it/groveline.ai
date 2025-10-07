@@ -219,10 +219,10 @@ export default function GMAMCaseStudy() {
         <section className="forest-card p-8 bg-gradient-to-br from-[#e8f0ff] to-[#f0f5ff] dark:from-[#0a0f15] dark:to-[#0f1015]">
           <h2 className="text-xl font-bold mb-4 text-[var(--grove)]">Read the Original Story</h2>
           <p className="text-[var(--muted)] mb-4">
-            This case study was originally shared on LinkedIn, where it resonated with operations professionals 
+            This case study was originally shared on LinkedIn, where it resonated with operations professionals
             facing similar challenges.
           </p>
-          
+          <a
             href="https://www.linkedin.com/feed/update/urn:li:share:7379930665003307008"
             target="_blank"
             rel="noopener noreferrer"

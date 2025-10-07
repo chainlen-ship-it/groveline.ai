@@ -17,14 +17,14 @@
    Collecting build traces ...
 
 Route (app)                                   Size     First Load JS
-┌ ○ /                                         191 B           101 kB
+┌ ○ /                                         187 B          96.2 kB
 ├ ○ /_not-found                               873 B          88.2 kB
-├ ○ /case-studies                             191 B           101 kB
-├ ○ /case-studies/allocator-platform          183 B          96.2 kB
-├ ○ /case-studies/bbt                         191 B           101 kB
-├ ○ /case-studies/founder-equity              183 B          96.2 kB
-├ ○ /case-studies/gmam                        183 B          96.2 kB
-└ ○ /case-studies/institutional-vs-pragmatic  183 B          96.2 kB
+├ ○ /case-studies                             188 B           101 kB
+├ ○ /case-studies/allocator-platform          187 B          96.2 kB
+├ ○ /case-studies/bbt                         188 B           101 kB
+├ ○ /case-studies/founder-equity              187 B          96.2 kB
+├ ○ /case-studies/gmam                        187 B          96.2 kB
+└ ○ /case-studies/institutional-vs-pragmatic  187 B          96.2 kB
 + First Load JS shared by all                 87.3 kB
   ├ chunks/117-f5a99faf69155abd.js            31.8 kB
   ├ chunks/fd9d1056-749e5812300142af.js       53.6 kB
