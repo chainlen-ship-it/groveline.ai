@@ -7,7 +7,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <header className="py-14 md:py-20 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--grove)] leading-tight">
-          Institutional Operations Infrastructure, Enhanced by AI
+          Institutional Operations Infrastructure, <br /> Enhanced by AI
         </h1>
         <p className="max-w-[900px] mx-auto text-xl md:text-2xl text-[var(--ink)] mb-8 leading-relaxed">
           We help emerging investment managers build institutional-grade operations infrastructure that passes allocator due diligence—at 60% of traditional costs.
