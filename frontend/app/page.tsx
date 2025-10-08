@@ -24,7 +24,7 @@ export default function HomePage() {
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
           <a
-            href="https://calendly.com/chris-groveline"
+            href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"

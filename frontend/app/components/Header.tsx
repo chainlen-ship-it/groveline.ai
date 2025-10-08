@@ -30,7 +30,7 @@ export default function Header() {
             LinkedIn
           </a>
           <a
-            href="https://calendly.com/chris-groveline"
+            href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-2 rounded-lg bg-forest hover:bg-forest-dark text-white transition-colors text-sm md:text-base font-semibold"
