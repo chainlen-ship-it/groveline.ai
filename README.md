@@ -53,10 +53,12 @@ groveline.ai/
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
-- **Styling:** Tailwind CSS + Custom CSS Variables
+- **Framework:** Next.js 14 (App Router) with static export
+- **Styling:** Tailwind CSS + Custom CSS Variables (forest theme)
 - **TypeScript:** Full type safety
-- **Deployment:** GitHub Pages (static export)
+- **Analytics:** Google Analytics 4 (G-BC515SS1FE)
+- **SEO:** Open Graph, Twitter Cards, Schema.org structured data
+- **Deployment:** GitHub Pages (static site generation)
 
 ---
 
@@ -146,28 +148,96 @@ If you prefer to deploy manually:
 
 ### DNS Configuration (GoDaddy)
 
-Already configured:
-- A records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- CNAME for `www` → `groveline.ai`
-- HTTPS enabled in GitHub Pages settings
+**A Records (for apex domain @):**
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+**CNAME Record (for www subdomain):**
+```
+Type: CNAME
+Name: www
+Value: chainlen-ship-it.github.io
+```
+
+**Note:** The www CNAME points to GitHub Pages directly, which handles SSL for both `groveline.ai` and `www.groveline.ai`. GitHub automatically redirects www to the apex domain.
 
 ---
 
 ## 📚 Content Structure
 
-### Pages
-- **Homepage** (`/`) - Hero, stats, featured projects, CTA
-- **Case Studies** (`/case-studies`) - Index of all case studies with insights
-- **Individual Case Studies:**
-  - GMAM Risk Approval System
-  - BBT Option Expiry Automation
-  - Institutional vs Pragmatic Launches
-  - Allocator Platform (Anonymized)
-  - Founder-Led Equity Fund (Anonymized)
+### Homepage Sections (v2.0 - Value-Focused)
+1. **Hero** - Value proposition: "60% of traditional costs"
+2. **Why Choose Groveline** - Big stats (60% savings, 2 funds, 300+ ODD)
+3. **The Challenge** - Problem statement for emerging managers
+4. **How We Deliver** - 4 pillars:
+   - Modular Vendor Architecture
+   - Smart Audit & Service Provider Selection
+   - AI-Enhanced Operations
+   - Allocator-Informed Design
+5. **What We Build** - 6 service cards
+6. **Track Record** - Merewether & Kiski case studies with specific results
+7. **Final CTA** - Contact info and calls to action
+
+### Case Studies
+- **GMAM** (`/case-studies/gmam`) - Trade approval system with SQL/Excel
+- **BBT** (`/case-studies/bbt`) - Option expiry automation
+- **Institutional vs Pragmatic** (`/case-studies/institutional-vs-pragmatic`) - Fund launch strategies
+- **Allocator Platform** (`/case-studies/allocator-platform`) - $200M institutional allocation
+- **Founder Equity** (`/case-studies/founder-equity`) - $150M fund launch
 
 ### Components
-- `Header.tsx` - Navigation with logo, links, CTA button
+- `Header.tsx` - Navigation with Groveline G logo
 - `Footer.tsx` - Contact info, social links, copyright
+- `GoogleAnalytics.tsx` - GA4 tracking (G-BC515SS1FE)
+- `StructuredData.tsx` - Schema.org SEO markup
+
+### Key Messaging
+- **Cost savings:** 60% vs traditional vendors
+- **Track record:** $350M+ raised across 2 funds
+- **Expertise:** 300+ operational due diligence reviews
+- **Specific examples:**
+  - Athena OMS + GRA: 67% savings vs bundled packages
+  - BDO audit: 60% savings vs Big 4
+
+---
+
+## 🔧 Troubleshooting
+
+### Changes not appearing on live site
+**Cause:** Forgot to rebuild and copy to root, or browser/CDN cache
+**Solution:**
+1. Run `bash deploy.sh` (or manual build + copy steps)
+2. Commit and push changes
+3. Hard refresh browser: `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
+4. Wait 2-5 minutes for GitHub Pages CDN to update
+5. Try incognito/private window to bypass cache
+
+### Case study pages showing 404
+**Cause:** Files not properly structured for Next.js App Router
+**Solution:** Each route needs to be in its own directory with `page.tsx`:
+```
+frontend/app/case-studies/
+├── page.tsx                    # /case-studies
+├── gmam/page.tsx              # /case-studies/gmam
+└── bbt/page.tsx               # /case-studies/bbt
+```
+
+### www subdomain SSL certificate error
+**Cause:** DNS CNAME not pointing to GitHub Pages
+**Solution:**
+- Set www CNAME to `chainlen-ship-it.github.io` (not `groveline.ai`)
+- GitHub Pages will handle SSL for both domains
+- Wait 10-30 minutes for DNS propagation
+
+### Deploy script not running (`./deploy.sh`)
+**Cause:** Windows line endings (CRLF) or file permissions
+**Solution:**
+- Use `bash deploy.sh` instead
+- Or run commands manually (see Manual Deployment Steps above)
 
 ---
 
