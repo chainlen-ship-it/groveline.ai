@@ -7,7 +7,7 @@ export interface Question {
   id: string;
   number: number;
   question: string;
-  type: 'single' | 'multiple' | 'number' | 'text' | 'table';
+  type: 'single' | 'multiple' | 'number' | 'text' | 'table' | 'multiple-with-text';
   options?: QuestionOption[];
   placeholder?: string;
   category: string;
@@ -20,7 +20,7 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q1',
     number: 1,
-    question: 'Do you plan to have tax-exempt investors (e.g., foundations, pensions)?',
+    question: 'Do you plan to have tax-exempt investors (e.g., offshore, endowments, foundations)?',
     type: 'single',
     category: 'Fund Formation',
     options: [
@@ -37,8 +37,8 @@ export const assessmentQuestions: Question[] = [
     type: 'single',
     category: 'Regulatory Strategy',
     options: [
-      { value: 'accredited', label: 'Accredited only (3(c)(1))' },
-      { value: 'qualified', label: 'Qualified purchasers (3(c)(7))' },
+      { value: 'accredited', label: 'Accredited only' },
+      { value: 'qualified', label: 'Qualified purchasers' },
       { value: 'both', label: 'Both' },
       { value: 'unsure', label: 'Not sure' },
     ],
@@ -124,7 +124,7 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q8',
     number: 8,
-    question: 'Will your fund hold any hard-to-value assets (e.g., private credit, crypto)?',
+    question: 'Will your fund hold any hard-to-value assets (e.g., Swaps, Credit, Private, Illiquid Stock, etc.)?',
     type: 'single',
     category: 'Valuation Policy',
     options: [
@@ -139,8 +139,8 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q9',
     number: 9,
-    question: 'Have you selected your core service providers?',
-    type: 'multiple',
+    question: 'Have you selected your core service providers? (check all that are selected)',
+    type: 'multiple-with-text',
     category: 'Vendor Strategy',
     options: [
       { value: 'prime_broker', label: 'Prime Broker' },
@@ -154,7 +154,7 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q10',
     number: 10,
-    question: 'How many employees do you currently have by function?',
+    question: 'How many employees do you currently have by function? (0 if not dedicated employee)',
     type: 'table',
     category: 'Org Design',
     tableRows: ['Trading', 'Portfolio Management', 'Operations', 'Compliance', 'Other'],
@@ -183,7 +183,7 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q13',
     number: 13,
-    question: 'What is your biggest operational pain point today?',
+    question: 'What are your biggest operational pain points today?',
     type: 'multiple',
     category: 'Immediate Needs',
     options: [
@@ -198,8 +198,8 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q14',
     number: 14,
-    question: 'What type of solution are you most interested in exploring?',
-    type: 'single',
+    question: 'What solutions are you exploring to address operational risks?',
+    type: 'multiple',
     category: 'Engagement Strategy',
     options: [
       { value: 'hire', label: 'Hire full-time staff' },
@@ -212,7 +212,7 @@ export const assessmentQuestions: Question[] = [
   {
     id: 'q15',
     number: 15,
-    question: 'Is there anything else you would like us to know about your fund or challenges?',
+    question: 'Is there anything else we should know about your fund?',
     type: 'text',
     category: 'Qualitative Insight',
     placeholder: 'Optional: Share any additional context...',

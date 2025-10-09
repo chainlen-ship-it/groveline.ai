@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getPool } from '@/lib/db';
 
 export async function POST(request: NextRequest) {
   try {
@@ -72,27 +73,14 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // TODO: Replace with actual database insert
-    // Example with Prisma:
-    /*
-    const assessment = await prisma.assessment.create({
-      data: assessmentData,
-    });
-
-    await prisma.assessmentAnswer.createMany({
-      data: answerRecords.map((record) => ({
-        ...record,
-        assessment_id: assessment.id,
-      })),
-    });
-    */
-
-    // Example with raw SQL (PostgreSQL):
-    /*
+    // Insert into PostgreSQL database
+    const pool = getPool();
     const client = await pool.connect();
+
     try {
       await client.query('BEGIN');
 
+      // Insert assessment record
       const assessmentResult = await client.query(
         `INSERT INTO assessments (name, email, started_at, submitted_at, completed, overall_score, utm_source, utm_medium, utm_campaign, referrer)
          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
@@ -113,6 +101,7 @@ export async function POST(request: NextRequest) {
 
       const assessmentId = assessmentResult.rows[0].id;
 
+      // Insert all answers
       for (const answer of answerRecords) {
         await client.query(
           `INSERT INTO assessment_answers (assessment_id, question_id, question_number, answer_value, answer_score)
@@ -122,19 +111,15 @@ export async function POST(request: NextRequest) {
       }
 
       await client.query('COMMIT');
+
+      console.log('[Assessment] Successfully saved assessment ID:', assessmentId);
     } catch (error) {
       await client.query('ROLLBACK');
+      console.error('[Assessment] Database error:', error);
       throw error;
     } finally {
       client.release();
     }
-    */
-
-    // For now, just log the data (replace this with actual database insert)
-    console.log('[Assessment] Would insert:', {
-      assessment: assessmentData,
-      answers: answerRecords,
-    });
 
     // Optional: Send email notification or add to CRM
     // await sendEmailNotification(email, name);

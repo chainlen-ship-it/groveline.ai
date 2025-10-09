@@ -111,6 +111,9 @@ export default function AssessmentQuiz() {
     if (currentQuestion.type === 'multiple') {
       return Array.isArray(answer) && answer.length > 0;
     }
+    if (currentQuestion.type === 'multiple-with-text') {
+      return answer.selected && Array.isArray(answer.selected) && answer.selected.length > 0;
+    }
     if (currentQuestion.type === 'table') {
       return Object.keys(answer || {}).length > 0;
     }
@@ -254,6 +257,48 @@ function QuestionInput({ question, value, onChange, onMultipleChange }: Question
             />
             <span className="text-[var(--ink)]">{option.label}</span>
           </label>
+        ))}
+      </div>
+    );
+  }
+
+  if (question.type === 'multiple-with-text') {
+    const currentValue = value || { selected: [], details: {} };
+    const selectedValues = currentValue.selected || [];
+    const details = currentValue.details || {};
+
+    return (
+      <div className="space-y-3">
+        {question.options?.map((option) => (
+          <div key={option.value} className="space-y-2">
+            <label className="flex items-center gap-3 p-4 rounded-lg border border-[var(--border)] cursor-pointer hover:bg-[#f0f7f0] dark:hover:bg-[#0f1511] transition-colors">
+              <input
+                type="checkbox"
+                value={option.value}
+                checked={selectedValues.includes(option.value)}
+                onChange={() => {
+                  const newSelected = selectedValues.includes(option.value)
+                    ? selectedValues.filter((v: string) => v !== option.value)
+                    : [...selectedValues, option.value];
+                  onChange({ selected: newSelected, details });
+                }}
+                className="w-5 h-5 text-[var(--forest)] focus:ring-2 focus:ring-[var(--forest)] rounded"
+              />
+              <span className="text-[var(--ink)]">{option.label}</span>
+            </label>
+            {selectedValues.includes(option.value) && (
+              <input
+                type="text"
+                placeholder={`Enter ${option.label} name`}
+                value={details[option.value] || ''}
+                onChange={(e) => {
+                  const newDetails = { ...details, [option.value]: e.target.value };
+                  onChange({ selected: selectedValues, details: newDetails });
+                }}
+                className="w-full px-4 py-2 ml-8 rounded-lg border border-[var(--border)] bg-white dark:bg-[var(--panel)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--forest)]"
+              />
+            )}
+          </div>
         ))}
       </div>
     );
