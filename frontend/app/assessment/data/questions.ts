@@ -28,7 +28,7 @@ export const assessmentQuestions: Question[] = [
       { value: 'no', label: 'No' },
       { value: 'unsure', label: "I'm not sure" },
     ],
-    insightHook: 'If Yes or Unsure → Suggest mini-master structure for future offshore flexibility',
+    insightHook: 'If Yes or Unsure then Suggest mini-master structure for future offshore flexibility',
   },
   {
     id: 'q2',
@@ -93,7 +93,7 @@ export const assessmentQuestions: Question[] = [
     id: 'q6',
     number: 6,
     question: 'How many signatories are required to move money from the fund?',
-    type: 'number',
+    type: 'single',
     category: 'Internal Controls',
     options: [
       { value: '1', label: '1' },

@@ -124,6 +124,18 @@ export default function AssessmentQuiz() {
     return true;
   };
 
+  // Handle Enter key to advance
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && canProceed() && !isSubmitting) {
+        handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentQuestionIndex, answers, isSubmitting]);
+
   if (!name || !email) {
     return null; // Will redirect
   }
@@ -164,6 +176,9 @@ export default function AssessmentQuiz() {
           value={answers[currentQuestion.id]}
           onChange={(value) => handleAnswer(currentQuestion.id, value)}
           onMultipleChange={(value) => handleMultipleChoice(currentQuestion.id, value)}
+          onAutoAdvance={() => {
+            setTimeout(() => handleNext(), 300);
+          }}
         />
       </div>
 
@@ -213,9 +228,10 @@ interface QuestionInputProps {
   value: any;
   onChange: (value: any) => void;
   onMultipleChange: (value: string) => void;
+  onAutoAdvance?: () => void;
 }
 
-function QuestionInput({ question, value, onChange, onMultipleChange }: QuestionInputProps) {
+function QuestionInput({ question, value, onChange, onMultipleChange, onAutoAdvance }: QuestionInputProps) {
   if (question.type === 'single') {
     return (
       <div className="space-y-3">
@@ -229,7 +245,13 @@ function QuestionInput({ question, value, onChange, onMultipleChange }: Question
               name={question.id}
               value={option.value}
               checked={value === option.value}
-              onChange={() => onChange(option.value)}
+              onChange={() => {
+                onChange(option.value);
+                // Auto-advance for single-choice questions
+                if (onAutoAdvance) {
+                  onAutoAdvance();
+                }
+              }}
               className="w-5 h-5 text-[var(--forest)] focus:ring-2 focus:ring-[var(--forest)]"
             />
             <span className="text-[var(--ink)]">{option.label}</span>
