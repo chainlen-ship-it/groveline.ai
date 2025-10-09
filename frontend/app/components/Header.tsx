@@ -16,19 +16,17 @@ export default function Header() {
         </Link>
         <div className="ml-auto flex items-center gap-2 md:gap-3">
           <Link
+            href="/assessment"
+            className="px-3 py-2 rounded-lg hover:bg-forest-sage/15 transition-colors text-sm md:text-base font-semibold text-[var(--forest)]"
+          >
+            Free Assessment
+          </Link>
+          <Link
             href="/case-studies"
             className="px-3 py-2 rounded-lg hover:bg-forest-sage/15 transition-colors text-sm md:text-base"
           >
             Case Studies
           </Link>
-          <a
-            href="https://www.linkedin.com/in/chainlen"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-2 rounded-lg hover:bg-forest-sage/15 transition-colors text-sm md:text-base"
-          >
-            LinkedIn
-          </a>
           <a
             href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
             target="_blank"

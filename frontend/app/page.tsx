@@ -15,7 +15,7 @@ export default function HomePage() {
 
         {/* Quick Stats Badges */}
         <div className="flex flex-wrap gap-3 justify-center mb-10">
-          <span className="forest-badge text-sm">300+ ODD Reviews</span>
+          <span className="forest-badge text-sm">900+ ODD Reviews</span>
           <span className="forest-badge text-sm">$150M+ Raised</span>
           <span className="forest-badge text-sm">Allocator-Ready</span>
           <span className="forest-badge text-sm">AI-Enhanced</span>
@@ -23,22 +23,52 @@ export default function HomePage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
+          <Link
+            href="/assessment"
+            className="inline-block px-6 py-3 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
+          >
+            Free Operational Assessment
+          </Link>
           <a
             href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
+            className="inline-block px-6 py-3 rounded-2xl bg-[#f3faf3] dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#e8f5e8] dark:hover:bg-[#243a28] transition-colors"
           >
             Schedule Discovery Call
           </a>
           <Link
             href="/case-studies"
-            className="inline-block px-6 py-3 rounded-2xl bg-[#f3faf3] dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#e8f5e8] dark:hover:bg-[#243a28] transition-colors"
+            className="inline-block px-6 py-3 rounded-2xl bg-white dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#e8f5e8] dark:hover:bg-[#243a28] transition-colors"
           >
             View Case Studies
           </Link>
         </div>
       </header>
+
+      {/* Assessment Callout */}
+      <section className="py-8 md:py-10">
+        <div className="forest-card p-6 md:p-8 bg-gradient-to-r from-[#e8f5e8] to-[#f0f7f0] dark:from-[#0f1511] dark:to-[#0f1410] border-l-4 border-[var(--forest)]">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-1">
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--grove)] mb-3">
+                Curious how your fund stacks up?
+              </h2>
+              <p className="text-[var(--muted)] mb-4 md:mb-0">
+                Take our free 15-question assessment to uncover operational risks, compliance gaps, and infrastructure inefficiencies. Get your score + custom insights in 5-7 minutes.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Link
+                href="/assessment"
+                className="inline-block px-8 py-4 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity whitespace-nowrap"
+              >
+                Start Free Assessment →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Emerging Managers Choose Groveline */}
       <section className="py-12 md:py-16">
@@ -55,7 +85,7 @@ export default function HomePage() {
           </div>
           <div className="forest-card p-8 text-center">
             <div className="text-5xl md:text-6xl font-bold text-[var(--forest)] mb-3">2</div>
-            <div className="text-lg font-semibold text-[var(--grove)] mb-2">Funds Launched to $150M+</div>
+            <div className="text-lg font-semibold text-[var(--grove)] mb-2">Funds Launched to $150M+ Each</div>
             <p className="text-sm text-[var(--muted)]">
               Complete operational buildouts from founding, securing institutional commitments
             </p>
@@ -64,7 +94,7 @@ export default function HomePage() {
             <div className="text-5xl md:text-6xl font-bold text-[var(--forest)] mb-3">300+</div>
             <div className="text-lg font-semibold text-[var(--grove)] mb-2">Operational Due Diligence Reviews</div>
             <p className="text-sm text-[var(--muted)]">
-              We know what allocators look for—we've been on both sides of the table
+              Across 300 distinct funds over 10 years, including multi-billion dollar institutional asset managers and emerging funds from $100M to $200B+ AUM
             </p>
           </div>
         </div>
