@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useAssessment } from '../useAssessment';
 import { generateInsights, calculateAssessmentScore, calculateOverallScore } from '../utils/scoring';
 import { trackPageView, trackEvent } from '../utils/analytics';
+import { supabase } from '@/lib/supabase';
 
 export default function AssessmentResults() {
   const router = useRouter();
@@ -48,24 +49,67 @@ export default function AssessmentResults() {
 
   const submitAssessment = async (score: number) => {
     try {
-      const response = await fetch('/api/assessment/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      // Insert assessment record
+      const { data: assessment, error: assessmentError } = await supabase
+        .from('assessments')
+        .insert({
           name,
           email,
-          answers,
-          openResponses,
-          startedAt: new Date().toISOString(),
-          submittedAt: new Date().toISOString(),
-          overallScore: score,
-        }),
+          started_at: new Date().toISOString(),
+          submitted_at: new Date().toISOString(),
+          completed: true,
+          overall_score: score,
+        })
+        .select()
+        .single();
+
+      if (assessmentError) {
+        console.error('Error inserting assessment:', assessmentError);
+        return;
+      }
+
+      console.log('[Assessment] Saved to Supabase, ID:', assessment.id);
+
+      // Prepare answer records
+      const answerRecords: Array<{
+        assessment_id: number;
+        question_id: string;
+        question_number: number;
+        answer_value: string;
+        answer_score: number | null;
+      }> = [];
+
+      // Add scored answers (q1-q10)
+      Object.entries(answers).forEach(([questionId, value]) => {
+        answerRecords.push({
+          assessment_id: assessment.id,
+          question_id: questionId,
+          question_number: parseInt(questionId.replace('q', '')),
+          answer_value: JSON.stringify(value),
+          answer_score: typeof value === 'number' ? value : null,
+        });
       });
 
-      if (!response.ok) {
-        console.error('Failed to submit assessment');
+      // Add open-ended responses (q11-q15)
+      Object.entries(openResponses).forEach(([questionId, value]) => {
+        answerRecords.push({
+          assessment_id: assessment.id,
+          question_id: questionId,
+          question_number: parseInt(questionId.replace('q', '')),
+          answer_value: value,
+          answer_score: null,
+        });
+      });
+
+      // Insert all answers
+      const { error: answersError } = await supabase
+        .from('assessment_answers')
+        .insert(answerRecords);
+
+      if (answersError) {
+        console.error('Error inserting answers:', answersError);
+      } else {
+        console.log('[Assessment] All answers saved successfully');
       }
     } catch (error) {
       console.error('Error submitting assessment:', error);
@@ -245,11 +289,8 @@ export default function AssessmentResults() {
 
       {/* Score Card */}
       <div className="forest-card p-8 md:p-10 mb-10 text-center bg-gradient-to-br from-[#e8f5e8] to-[#f0f7f0] dark:from-[#0f1511] dark:to-[#0f1410]">
-        <div className={`text-6xl md:text-7xl font-bold mb-4 ${getScoreColor(overallScore)}`}>
-          {overallScore}%
-        </div>
-        <div className="text-2xl font-bold text-[var(--grove)] mb-2">{getScoreLabel(overallScore)}</div>
-        <p className="text-[var(--muted)]">
+        <div className="text-3xl md:text-4xl font-bold text-[var(--grove)] mb-4">{getScoreLabel(overallScore)}</div>
+        <p className="text-lg text-[var(--muted)]">
           {insights.filter((i) => !i.isStrength).length > 0
             ? 'We have identified key areas where you can strengthen your operational infrastructure'
             : 'Your operational foundation is solid - keep building on these strengths'}

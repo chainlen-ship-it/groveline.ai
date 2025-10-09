@@ -112,9 +112,9 @@ const insightTemplates: Record<string, Insight> = {
         text: 'Train staff on conflict-of-interest scenarios',
       },
       {
-        text: 'Review SEC guidance on personal trading',
-        link: 'https://www.acaglobal.com/resources/personal-trading-policy',
-        linkText: 'ACA Guide to Personal Trading Compliance',
+        text: 'Review ACA best practices for personal trading',
+        link: 'https://www.acaglobal.com/industry-insights/best-practices-capturing-employee-personal-trading-activity-sec-regulated-firms/#:~:text=Under%20SEC%20regulations%2C%20most%20financial,their%20trading%20and%20investment%20processes.',
+        linkText: 'ACA Best Practices for Personal Trading',
       },
     ],
     score: 0,
