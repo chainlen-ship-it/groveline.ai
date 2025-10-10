@@ -24,10 +24,10 @@ export default function HomePage() {
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
           <Link
-            href="/assessment"
+            href="/assessment2"
             className="inline-block px-6 py-3 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
           >
-            Free Operational Assessment
+            Complimentary Operational Assessment
           </Link>
           <a
             href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
@@ -55,15 +55,15 @@ export default function HomePage() {
                 Curious how your fund stacks up?
               </h2>
               <p className="text-[var(--muted)] mb-4 md:mb-0">
-                Take our free 15-question assessment to uncover operational risks, compliance gaps, and infrastructure inefficiencies. Get your score + custom insights in 5-7 minutes.
+                Take our complimentary 15-question assessment to uncover operational risks, compliance gaps, and infrastructure inefficiencies. Get your score + custom insights in 5-7 minutes.
               </p>
             </div>
             <div className="flex-shrink-0">
               <Link
-                href="/assessment"
+                href="/assessment2"
                 className="inline-block px-8 py-4 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity whitespace-nowrap"
               >
-                Start Free Assessment →
+                Start Complimentary Assessment →
               </Link>
             </div>
           </div>
@@ -366,8 +366,8 @@ export default function HomePage() {
               <strong className="text-[var(--grove)]">Chris Hainlen</strong> • Investment Operations Infrastructure
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm text-[var(--muted)]">
-              <a href="mailto:chris@groveline.ai" className="hover:text-[var(--forest)] transition-colors">
-                chris@groveline.ai
+              <a href="mailto:hello@groveline.ai" className="hover:text-[var(--forest)] transition-colors">
+                hello@groveline.ai
               </a>
               <span>•</span>
               <a href="tel:903-605-6399" className="hover:text-[var(--forest)] transition-colors">

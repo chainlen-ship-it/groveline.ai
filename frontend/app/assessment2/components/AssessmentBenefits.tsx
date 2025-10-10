@@ -1,49 +1,31 @@
 export function AssessmentBenefits() {
   return (
     <>
-      {/* Frustration Hook */}
+      {/* Chicken/Egg Box */}
+      <div className="forest-card p-8 md:p-10 mb-10 bg-gradient-to-br from-[#f5f5f5] to-[#e8f5e8] dark:from-[#1a1f1b] dark:to-[#0f1511] border-l-4 border-[var(--forest)]">
+        <p className="text-lg text-[var(--ink)] leading-relaxed mb-4">
+          It's the classic chicken-or-egg question: Do you build strong operations to attract investors, or to protect your fund from failure?
+        </p>
+        <p className="text-lg font-semibold text-[var(--grove)]">
+          The truth? It doesn't matter which comes first. You need institutional-quality infrastructure either way.
+        </p>
+      </div>
+
+      {/* Statistics */}
       <div className="forest-card p-8 md:p-10 mb-10">
-        <h2 className="text-2xl font-bold mb-6 text-[var(--grove)]">
-          The Hidden Costs of Inadequate Operations
-        </h2>
-        <div className="space-y-4 text-[var(--muted)]">
-          <p className="flex items-start gap-3">
-            <span className="text-2xl flex-shrink-0" aria-hidden="true">❌</span>
-            <span>
-              <strong className="text-[var(--ink)]">Lost allocations:</strong> Allocators walk away
-              from 60% of funds during operational due diligence
-            </span>
-          </p>
-          <p className="flex items-start gap-3">
-            <span className="text-2xl flex-shrink-0" aria-hidden="true">💸</span>
-            <span>
-              <strong className="text-[var(--ink)]">Overpaying for basics:</strong> Traditional
-              vendors charge 2-3x what smart, modular architectures cost
-            </span>
-          </p>
-          <p className="flex items-start gap-3">
-            <span className="text-2xl flex-shrink-0" aria-hidden="true">⏰</span>
-            <span>
-              <strong className="text-[var(--ink)]">Manual inefficiency:</strong> Operations teams
-              waste 15-20 hours/week on tasks that could be automated
-            </span>
-          </p>
-          <p className="flex items-start gap-3">
-            <span className="text-2xl flex-shrink-0" aria-hidden="true">🚨</span>
-            <span>
-              <strong className="text-[var(--ink)]">Compliance gaps:</strong> Small oversights in
-              documentation can derail months of fundraising
-            </span>
-          </p>
-        </div>
+        <p className="text-lg text-[var(--muted)] mb-6">
+          More than 60% of executives indicate that poor due diligence is the main reason for deal failure.<sup>¹</sup>
+        </p>
+        <p className="text-lg text-[var(--muted)]">
+          Traditional due diligence questionnaires barely scratch the surface of what makes operations truly institutional-grade.
+        </p>
       </div>
 
       {/* Readiness Hook */}
       <div className="forest-card p-8 md:p-10 mb-10 bg-gradient-to-br from-[#e8f5e8] to-[#f0f7f0] dark:from-[#0f1511] dark:to-[#0f1410]">
         <h2 className="text-2xl font-bold mb-4 text-[var(--grove)]">Find Out Where You Stand</h2>
         <p className="text-lg text-[var(--muted)] mb-6">
-          Our 15-question assessment evaluates your operational infrastructure across the key areas
-          allocators scrutinize:
+          Our assessment evaluates your operational infrastructure across the key areas allocators scrutinize:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
           <div className="flex items-center gap-2">
@@ -72,7 +54,7 @@ export function AssessmentBenefits() {
           </div>
         </div>
         <p className="text-[var(--grove)] font-semibold">
-          ⏱️ Takes 5-7 minutes • Get your score + custom insights instantly
+          ⏱️ Takes 3-5 minutes • Get your score + custom insights instantly
         </p>
       </div>
     </>

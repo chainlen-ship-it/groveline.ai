@@ -17,7 +17,7 @@ export function AssessmentForm() {
   return (
     <div className="forest-card p-8 md:p-10">
       <h2 className="text-2xl font-bold mb-6 text-center text-[var(--grove)]">
-        Start Your Free Assessment
+        Start Your Complimentary Assessment
       </h2>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto" noValidate>
         <div className="mb-6">

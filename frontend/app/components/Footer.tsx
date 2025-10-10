@@ -13,7 +13,7 @@ export default function Footer() {
           style={{ filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.25))' }}
         />
         <div className="space-y-2 text-sm md:text-base">
-          <div>Dallas, Texas • 903-605-6398 • <a href="mailto:chris@groveline.ai" className="hover:underline">chris@groveline.ai</a></div>
+          <div>Dallas, Texas • 903-605-6398 • <a href="mailto:hello@groveline.ai" className="hover:underline">hello@groveline.ai</a></div>
           <div>
             <a
               href="https://www.linkedin.com/in/chainlen"

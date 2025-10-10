@@ -242,7 +242,7 @@ export default function AssessmentResults() {
 
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
-      doc.text('Email: chris@groveline.ai', margin, y);
+      doc.text('Email: hello@groveline.ai', margin, y);
       y += 6;
       doc.text('Phone: 903-605-6399', margin, y);
       y += 6;
@@ -458,8 +458,8 @@ export default function AssessmentResults() {
             <strong className="text-[var(--grove)]">Chris Hainlen</strong> • Founder, Groveline.ai
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <a href="mailto:chris@groveline.ai" className="hover:text-[var(--forest)] transition-colors">
-              chris@groveline.ai
+            <a href="mailto:hello@groveline.ai" className="hover:text-[var(--forest)] transition-colors">
+              hello@groveline.ai
             </a>
             <span>•</span>
             <a href="tel:903-605-6399" className="hover:text-[var(--forest)] transition-colors">

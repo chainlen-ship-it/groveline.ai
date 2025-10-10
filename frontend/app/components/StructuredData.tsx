@@ -18,7 +18,7 @@ export default function StructuredData() {
       "@type": "ContactPoint",
       "telephone": "+1-903-605-6398",
       "contactType": "Sales",
-      "email": "chris@groveline.ai",
+      "email": "hello@groveline.ai",
       "availableLanguage": "English"
     },
     "founder": {

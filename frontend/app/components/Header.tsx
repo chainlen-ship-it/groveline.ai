@@ -16,10 +16,10 @@ export default function Header() {
         </Link>
         <div className="ml-auto flex items-center gap-2 md:gap-3">
           <Link
-            href="/assessment"
+            href="/assessment2"
             className="px-3 py-2 rounded-lg hover:bg-forest-sage/15 transition-colors text-sm md:text-base font-semibold text-[var(--forest)]"
           >
-            Free Assessment
+            Complimentary Assessment
           </Link>
           <Link
             href="/case-studies"
