@@ -20,11 +20,11 @@ export default function AssessmentQuiz() {
   const progress = ((currentQuestionIndex + 1) / assessmentQuestions.length) * 100;
 
   useEffect(() => {
-    // Redirect if no user info
-    if (!name || !email) {
-      router.push('/assessment');
-      return;
-    }
+    // TEMPORARILY DISABLED FOR DEMO - redirect if no user info
+    // if (!name || !email) {
+    //   router.push('/assessment');
+    //   return;
+    // }
 
     trackPageView('/assessment/quiz', 'Assessment Quiz');
   }, [name, email, router]);
@@ -136,9 +136,10 @@ export default function AssessmentQuiz() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentQuestionIndex, answers, isSubmitting]);
 
-  if (!name || !email) {
-    return null; // Will redirect
-  }
+  // TEMPORARILY DISABLED FOR DEMO
+  // if (!name || !email) {
+  //   return null; // Will redirect
+  // }
 
   return (
     <div className="max-w-[800px] mx-auto px-4 py-12 md:py-20">
