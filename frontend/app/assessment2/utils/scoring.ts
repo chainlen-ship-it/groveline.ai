@@ -107,8 +107,8 @@ const insightTemplates: Record<string, Insight> = {
       { text: 'Codify procedures in the compliance manual and train staff annually.' },
       {
         text: 'Benchmark against industry practice.',
-        link: 'https://www.acaglobal.com/industry-insights/best-practices-capturing-employee-personal-trading-activity-sec-regulated-firms/#:~:text=Under%20SEC%20regulations%2C%20most%20financial,their%20trading%20and%20investment%20processes.',
-        linkText: 'ACA: Personal Trading Best Practices',
+        link: 'https://fintech.global/2024/12/09/best-practices-for-monitoring-employee-trades-in-sec-regulated-firms/',
+        linkText: 'FinTech Global: Personal Trading Best Practices',
       },
     ],
     score: 0,
@@ -141,21 +141,23 @@ const insightTemplates: Record<string, Insight> = {
     score: 0,
   },
   q7: {
-    area: 'Infrastructure',
-    category: 'Prime Brokerage',
-    summary: 'Multiple primes require robust reconciliation and oversight.',
-    recommendations: [
-      { text: 'Use an integrated OMS/PMS to track trades, positions, financing, and margin across brokers.' },
-      { text: 'Automate cash/position/margin reconciliations to surface breaks early.' },
-      { text: 'Document allocation logic, collateral management, and comms protocols for ODD.' },
-      {
-        text: 'Review AIMA guidance on selecting and assessing prime brokers.',
-        link: 'https://www.aima.org/article/aima-launches-guide-to-sound-practices-for-selecting-and-periodically-assessing-prime-brokers.html',
-        linkText: 'AIMA: Selecting & Assessing Prime Brokers',
-      },
-    ],
-    score: 0,
-  },
+    area: 'Infrastructure', 
+	category: 'Trading Systems Integration', 
+	summary: 'Multiple prime brokers require integrated OMS, PMS, and EMS for consistency and control.', 
+	recommendations: [ 
+		{ text: 'Select and integrate an OMS/PMS/EMS stack capable of aggregating trades, positions, financing, and margin across all brokers.' }, 
+		{ text: 'Automate daily reconciliations (cash, positions, margin) to catch breaks and discrepancies proactively.' }, 
+		{ text: 'Define clear data ownership and flow between front, middle, and back office systems to avoid reconciliation gaps.' }, 
+		{ text: 'Document your multi-prime workflows—trade allocation, collateral management, broker communication—for ODD purposes.' }, 
+		{ 
+			text: 'Review infrastructure-level guidance on OMS/PMS design, capabilities, and prime broker integration.', 
+			link: 'https://www.broadridge.com/insight-pages/why-hedge-funds-need-the-right-oms-pms-to-scale-with-confidence', 
+			linkText: 'Why Hedge Funds Need the Right OMS/PMS', 
+		} 
+	], 
+	score: 0 
+},
+
   q8: {
     area: 'Valuation Policy',
     category: 'Hard-to-Value Assets',
