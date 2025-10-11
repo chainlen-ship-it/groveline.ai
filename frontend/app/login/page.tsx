@@ -28,8 +28,8 @@ export default function LoginPage() {
             <Image
               src="/assets/Groveline-G.png"
               alt="Groveline"
-              width={60}
-              height={60}
+              width={50}
+              height={50}
               className="h-15 w-auto mx-auto mb-4"
             />
           </Link>

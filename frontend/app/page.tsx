@@ -7,10 +7,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <header className="py-14 md:py-20 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--grove)] leading-tight">
-          Institutional Operations Infrastructure, <br /> Enhanced by AI
+          Institutional Operations Infrastructure
         </h1>
         <p className="max-w-[900px] mx-auto text-xl md:text-2xl text-[var(--ink)] mb-8 leading-relaxed">
-          We help emerging investment managers build institutional-grade operations infrastructure that passes allocator due diligence—at 60% of traditional costs.
+          We help emerging investment managers build institutional-grade operations infrastructure that passes allocator due diligence, often at 60% of traditional costs.
         </p>
 
         {/* Quick Stats Badges */}
@@ -55,7 +55,7 @@ export default function HomePage() {
                 Curious how your fund stacks up?
               </h2>
               <p className="text-[var(--muted)] mb-4 md:mb-0">
-                Take our complimentary 15-question assessment to uncover operational risks, compliance gaps, and infrastructure inefficiencies. Get your score + custom insights in 5-7 minutes.
+                Take our complimentary 15-question assessment to uncover operational risks, compliance gaps, and infrastructure inefficiencies. Get your score + custom insights in 3-5 minutes.
               </p>
             </div>
             <div className="flex-shrink-0">

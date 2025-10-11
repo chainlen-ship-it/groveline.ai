@@ -25,7 +25,12 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="mt-8 text-xs md:text-sm opacity-75">
+        <div className="mt-6 text-xs md:text-sm">
+          <a href="/privacy" className="hover:underline opacity-75 hover:opacity-100">Privacy Policy</a>
+          <span className="mx-2 opacity-50">•</span>
+          <a href="/terms" className="hover:underline opacity-75 hover:opacity-100">Terms and Conditions</a>
+        </div>
+        <div className="mt-4 text-xs md:text-sm opacity-75">
           © 2025 Groveline Advisor Services. All rights reserved.
         </div>
       </div>
