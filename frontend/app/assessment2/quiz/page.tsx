@@ -110,6 +110,12 @@ export default function AssessmentQuiz() {
 
   const canProceed = () => {
     const answer = answers[currentQuestion.id];
+
+    // Special case: Q15 is always optional (allow blank submission)
+    if (currentQuestion.type === 'text' && currentQuestion.number === 15) {
+      return true;
+    }
+
     if (!answer) return false;
 
     if (currentQuestion.type === 'multiple') {
@@ -122,8 +128,7 @@ export default function AssessmentQuiz() {
       return Object.keys(answer || {}).length > 0;
     }
     if (currentQuestion.type === 'text') {
-      // Q15 is optional
-      return currentQuestion.number === 15 || (answer && answer.trim().length > 0);
+      return answer && answer.trim().length > 0;
     }
     return true;
   };

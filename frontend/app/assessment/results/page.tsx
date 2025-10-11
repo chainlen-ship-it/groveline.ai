@@ -204,7 +204,7 @@ export default function AssessmentResults() {
         '',
         'Our founder, Chris Hainlen, has launched multiple funds from zero to over $150M+ in',
         'institutional commitments, designed policy stacks that pass diligence at 60% of traditional',
-        'cost, and conducted 300+ operational due diligence reviews across hedge fund, private',
+        'cost, and conducted 900+ operational due diligence reviews across hedge fund, private',
         'equity, and real estate strategies.',
       ];
 
@@ -367,7 +367,7 @@ export default function AssessmentResults() {
         <p className="text-[var(--muted)] mb-6 leading-relaxed">
           Our founder, Chris Hainlen, has launched multiple funds from zero to over $150M+ in
           institutional commitments, designed policy stacks that pass diligence at 60% of traditional
-          cost, and conducted 300+ operational due diligence reviews across hedge fund, private
+          cost, and conducted 900+ operational due diligence reviews across hedge fund, private
           equity, and real estate strategies.
         </p>
 

@@ -15,7 +15,7 @@ export function AssessmentForm() {
   } = useAssessmentForm();
 
   return (
-    <div className="forest-card p-8 md:p-10">
+    <div id="assessment-form" className="forest-card p-8 md:p-10">
       <h2 className="text-2xl font-bold mb-6 text-center text-[var(--grove)]">
         Start Your Complimentary Assessment
       </h2>

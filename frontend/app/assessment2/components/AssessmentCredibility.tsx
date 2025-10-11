@@ -6,7 +6,7 @@ export function AssessmentCredibility() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="forest-card p-6 text-center">
-          <div className="text-4xl font-bold text-[var(--forest)] mb-2">300+</div>
+          <div className="text-4xl font-bold text-[var(--forest)] mb-2">900+</div>
           <div className="text-sm text-[var(--muted)]">ODD Reviews Conducted</div>
         </div>
         <div className="forest-card p-6 text-center">

@@ -91,10 +91,10 @@ export default function HomePage() {
             </p>
           </div>
           <div className="forest-card p-8 text-center">
-            <div className="text-5xl md:text-6xl font-bold text-[var(--forest)] mb-3">300+</div>
+            <div className="text-5xl md:text-6xl font-bold text-[var(--forest)] mb-3">900+</div>
             <div className="text-lg font-semibold text-[var(--grove)] mb-2">Operational Due Diligence Reviews</div>
             <p className="text-sm text-[var(--muted)]">
-              Across 300 distinct funds over 10 years, including multi-billion dollar institutional asset managers and emerging funds from $100M to $200B+ AUM
+              900+ reviews across 300+ distinct funds over 10 years, including multi-billion dollar institutional asset managers and emerging funds from $10M to $200B+ AUM
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
             You need institutional-quality operations to secure allocator commitments. But traditional solutions—enterprise platforms, bundled vendor packages, Big 4 auditors—are priced for established firms with hundreds of millions in AUM.
           </p>
           <p className="text-lg text-[var(--ink)] leading-relaxed">
-            <strong className="text-[var(--grove)]">We solve this with intelligent architecture:</strong> modular vendor selection, AI-enhanced workflows, and operational design informed by 300+ due diligence reviews. You get institutional credibility that passes allocator scrutiny—at 60% of traditional costs.
+            <strong className="text-[var(--grove)]">We solve this with intelligent architecture:</strong> modular vendor selection, AI-enhanced workflows, and operational design informed by 900+ due diligence reviews. You get institutional credibility that passes allocator scrutiny—at 60% of traditional costs.
           </p>
         </div>
       </section>
@@ -199,7 +199,7 @@ export default function HomePage() {
                 <strong className="text-[var(--ink)]">Traditional consultants:</strong> Generic best practices that may miss what allocators actually scrutinize
               </p>
               <p className="text-[var(--muted)] mb-4">
-                <strong className="text-[var(--ink)]">Our advantage:</strong> 300+ operational due diligence reviews from the allocator's side—we know exactly what passes institutional scrutiny
+                <strong className="text-[var(--ink)]">Our advantage:</strong> 900+ operational due diligence reviews from the allocator's side—we know exactly what passes institutional scrutiny
               </p>
               <div className="bg-[#f0f7f0] dark:bg-[#0f1410] p-4 rounded-lg border border-[var(--border)]">
                 <p className="text-sm text-[var(--grove)] font-semibold">
@@ -240,7 +240,7 @@ export default function HomePage() {
             <div className="text-4xl mb-4">✓</div>
             <h3 className="text-xl font-bold mb-3 text-[var(--grove)]">Allocator Readiness</h3>
             <p className="text-[var(--muted)] mb-4">
-              Policy stacks, audit prep, and diligence workflows informed by 300+ ODD reviews—we know what allocators look for
+              Policy stacks, audit prep, and diligence workflows informed by 900+ ODD reviews—we know what allocators look for
             </p>
           </div>
 
