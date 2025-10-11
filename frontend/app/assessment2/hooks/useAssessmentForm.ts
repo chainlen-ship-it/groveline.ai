@@ -59,8 +59,12 @@ export function useAssessmentForm() {
       setUserInfo(name, email);
       setStartedAt();
 
-      // Navigate to quiz
-      router.push('/assessment2/quiz');
+      // Navigate to quiz (static export safe)
+      try {
+        router.push('/assessment2/quiz.html');
+      } catch {
+        window.location.assign('/assessment2/quiz.html');
+      }
     } catch (error) {
       console.error('Error starting assessment:', error);
       setIsSubmitting(false);

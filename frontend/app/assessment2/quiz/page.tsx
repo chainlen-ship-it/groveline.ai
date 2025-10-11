@@ -97,7 +97,11 @@ export default function AssessmentQuiz() {
         event_label: 'Assessment Quiz Completed',
       });
 
-      router.push('/assessment2/results');
+      try {
+        router.push('/assessment2/results.html');
+      } catch {
+        window.location.assign('/assessment2/results.html');
+      }
     } catch (error) {
       console.error('Error submitting assessment:', error);
       setIsSubmitting(false);
@@ -213,7 +217,7 @@ export default function AssessmentQuiz() {
       {/* Exit Link */}
       <div className="mt-6 text-center">
         <Link
-          href="/assessment"
+          href="/assessment2"
           className="text-sm text-[var(--muted)] hover:text-[var(--forest)] transition-colors"
         >
           Save and exit

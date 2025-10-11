@@ -16,9 +16,9 @@ export default function AssessmentResults() {
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
 
   useEffect(() => {
-    // Redirect if assessment not completed
+    // Only proceed when assessment completed
     if (!isComplete || !name || !email) {
-      router.push('/assessment');
+      trackPageView('/assessment2/results-pending', 'Assessment Results (Pending)');
       return;
     }
 
@@ -44,7 +44,7 @@ export default function AssessmentResults() {
     // Submit to database
     submitAssessment(score);
 
-    trackPageView('/assessment/results', 'Assessment Results');
+    trackPageView('/assessment2/results', 'Assessment Results (v2)');
   }, [isComplete, name, email, answers, openResponses, router]);
 
   const submitAssessment = async (score: number) => {
@@ -272,7 +272,15 @@ export default function AssessmentResults() {
   };
 
   if (!isComplete || !name || !email) {
-    return null; // Will redirect
+    return (
+      <div className="max-w-[900px] mx-auto px-4 py-12 md:py-20">
+        <div className="forest-card p-8 md:p-10 text-center">
+          <h2 className="text-2xl font-bold mb-4 text-[var(--grove)]">Finish the assessment</h2>
+          <p className="text-[var(--muted)] mb-6">Please complete the assessment to view results.</p>
+          <a href="/assessment2" className="px-6 py-3 rounded-xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity">Go to Assessment</a>
+        </div>
+      </div>
+    );
   }
 
   return (
