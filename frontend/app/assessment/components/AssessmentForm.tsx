@@ -1,6 +1,6 @@
 export function AssessmentForm() {
   return (
-    <div className="forest-card p-8 md:p-10 text-center">
+    <div id="assessment-form" className="forest-card p-8 md:p-10 text-center">
       <h2 className="text-2xl font-bold mb-6 text-[var(--grove)]">
         Coming Soon
       </h2>

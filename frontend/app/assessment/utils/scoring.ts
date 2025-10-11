@@ -135,7 +135,7 @@ const insightTemplates: Record<string, Insight> = {
       },
       {
         text: 'Review SEC cost principles',
-        link: 'https://www.sec.gov/investment/private-fund-adviser-frequently-asked-questions',
+        link: 'https://www.sec.gov/investment/private-fund-advisers',
         linkText: 'SEC Private Fund Adviser FAQs',
       },
     ],

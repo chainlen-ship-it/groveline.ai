@@ -11,12 +11,6 @@ export function AssessmentBenefits() {
         </p>
       </div>
 
-      {/* Statistics */}
-      <div className="forest-card p-8 md:p-10 mb-10">
-        <p className="text-lg text-[var(--muted)] mb-6">
-          More than 60% of executives indicate that poor due diligence is the main reason for deal failure.<sup>¹</sup>
-        </p>
-      </div>
 
       {/* Readiness Hook */}
       <div className="forest-card p-8 md:p-10 mb-10 bg-gradient-to-br from-[#e8f5e8] to-[#f0f7f0] dark:from-[#0f1511] dark:to-[#0f1410]">

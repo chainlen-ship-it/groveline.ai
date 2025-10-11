@@ -110,7 +110,7 @@ export const assessmentQuestions: Question[] = [
     id: 'q7',
     number: 7,
     question: 'How many prime brokerage accounts do you plan to use?',
-    type: 'number',
+    type: 'single',
     category: 'Infrastructure',
     options: [
       { value: '1', label: '1' },
@@ -148,6 +148,7 @@ export const assessmentQuestions: Question[] = [
       { value: 'fund_admin', label: 'Fund Administrator' },
       { value: 'auditor', label: 'Auditor' },
       { value: 'legal', label: 'Legal Counsel' },
+      { value: 'none', label: 'None Selected' },
     ],
     insightHook: 'Identify gaps and offer vendor selection support',
   },
