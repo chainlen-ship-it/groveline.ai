@@ -21,6 +21,7 @@ export default function GMAMCaseStudy() {
           How I taught myself SQL, built a trade approval system with Excel as the front-end, 
           and learned that you can absolutely overdo it on the policy front
         </p>
+        <p className="mt-4 text-sm text-[var(--grove)] font-semibold">Outcome: Eliminated paper approvals and created an auditable, transparent sign-off workflow.</p>
       </div>
 
       <div className="space-y-8">

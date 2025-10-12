@@ -13,9 +13,15 @@ export default function PrivacyPolicy() {
         </Link>
       </div>
 
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[var(--grove)]">Privacy Policy</h1>
+  <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[var(--grove)]">Privacy Policy</h1>
 
-      <div className="space-y-6 text-[var(--muted)]">
+  <div className="space-y-6 text-[var(--muted)]">
+    <div className="forest-card p-4 md:p-5">
+      <p className="text-sm">
+        <strong>TL;DR:</strong> We collect only what we need (contact info and assessment responses), use it to send your results and improve the service, and we don’t sell your data.
+        You can opt out of marketing anytime. Questions? Email <a href="mailto:privacy@groveline.ai" className="text-[var(--forest)] hover:underline">privacy@groveline.ai</a>.
+      </p>
+    </div>
         <p className="text-sm text-[var(--muted)]">
           <strong>Last Updated:</strong> January 9, 2025
         </p>

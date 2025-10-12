@@ -10,7 +10,7 @@ export default function HomePage() {
           Institutional Operations Infrastructure
         </h1>
         <p className="max-w-[900px] mx-auto text-xl md:text-2xl text-[var(--ink)] mb-8 leading-relaxed">
-          We help emerging investment managers build institutional-grade operations infrastructure that passes allocator due diligence, often at 60% of traditional costs.
+          We help emerging investment managers build institutional‑grade operations infrastructure that passes allocator due diligence, often at 60% of traditional costs.
         </p>
 
         {/* Quick Stats Badges */}
@@ -35,13 +35,19 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-2xl bg-[#f3faf3] dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#e8f5e8] dark:hover:bg-[#243a28] transition-colors"
           >
-            Schedule Discovery Call
+            Schedule a 20-minute Intro
           </a>
           <Link
             href="/case-studies"
             className="inline-block px-6 py-3 rounded-2xl bg-white dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#e8f5e8] dark:hover:bg-[#243a28] transition-colors"
           >
             View Case Studies
+          </Link>
+          <Link
+            href="/services"
+            className="inline-block px-6 py-3 rounded-2xl bg-white dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#e8f5e8] dark:hover:bg-[#243a28] transition-colors"
+          >
+            Explore Services
           </Link>
         </div>
       </header>
@@ -133,10 +139,10 @@ export default function HomePage() {
             </div>
             <div className="ml-12">
               <p className="text-[var(--muted)] mb-3">
-                <strong className="text-[var(--ink)]">Traditional approach:</strong> Bundled packages lock you into expensive enterprise pricing from day one
+                <strong className="text-[var(--ink)]">Traditional:</strong> Bundled packages force enterprise pricing from day one.
               </p>
               <p className="text-[var(--muted)] mb-4">
-                <strong className="text-[var(--ink)]">Our approach:</strong> Best-of-breed components that integrate seamlessly—pay for what you need, when you need it
+                <strong className="text-[var(--ink)]">Our approach:</strong> Modular, best‑of‑breed stack. Pay for what you need, when you need it.
               </p>
               <div className="bg-[#f0f7f0] dark:bg-[#0f1410] p-4 rounded-lg border border-[var(--border)]">
                 <p className="text-sm text-[var(--grove)] font-semibold">
@@ -154,10 +160,10 @@ export default function HomePage() {
             </div>
             <div className="ml-12">
               <p className="text-[var(--muted)] mb-3">
-                <strong className="text-[var(--ink)]">Traditional approach:</strong> Big 4 audit firms command premium pricing for emerging managers
+                <strong className="text-[var(--ink)]">Traditional:</strong> Big 4 audits at Big 4 pricing.
               </p>
               <p className="text-[var(--muted)] mb-4">
-                <strong className="text-[var(--ink)]">Our approach:</strong> Top-tier regional firms (BDO, Grant Thornton) deliver same institutional credibility at 60% cost
+                <strong className="text-[var(--ink)]">Our approach:</strong> Top‑tier regionals deliver the same credibility at ~60% cost.
               </p>
               <div className="bg-[#f0f7f0] dark:bg-[#0f1410] p-4 rounded-lg border border-[var(--border)]">
                 <p className="text-sm text-[var(--grove)] font-semibold">
@@ -175,10 +181,10 @@ export default function HomePage() {
             </div>
             <div className="ml-12">
               <p className="text-[var(--muted)] mb-3">
-                <strong className="text-[var(--ink)]">Traditional approach:</strong> Manual reconciliation, compliance checks, and reporting processes require expensive headcount
+                <strong className="text-[var(--ink)]">Traditional:</strong> Manual reconciliation and reporting eat time and budget.
               </p>
               <p className="text-[var(--muted)] mb-4">
-                <strong className="text-[var(--ink)]">Our approach:</strong> Python/AI-assisted workflows automate routine tasks—you get systematic verification without the operational overhead
+                <strong className="text-[var(--ink)]">Our approach:</strong> Automation handles routine checks; you keep control without the overhead.
               </p>
               <div className="bg-[#f0f7f0] dark:bg-[#0f1410] p-4 rounded-lg border border-[var(--border)]">
                 <p className="text-sm text-[var(--grove)] font-semibold">
@@ -196,10 +202,10 @@ export default function HomePage() {
             </div>
             <div className="ml-12">
               <p className="text-[var(--muted)] mb-3">
-                <strong className="text-[var(--ink)]">Traditional consultants:</strong> Generic best practices that may miss what allocators actually scrutinize
+                <strong className="text-[var(--ink)]">Typical:</strong> Generic best practices miss what allocators actually scrutinize.
               </p>
               <p className="text-[var(--muted)] mb-4">
-                <strong className="text-[var(--ink)]">Our advantage:</strong> 900+ operational due diligence reviews from the allocator's side—we know exactly what passes institutional scrutiny
+                <strong className="text-[var(--ink)]">Our advantage:</strong> 900+ ODD reviews from the allocator’s side — we know what passes.
               </p>
               <div className="bg-[#f0f7f0] dark:bg-[#0f1410] p-4 rounded-lg border border-[var(--border)]">
                 <p className="text-sm text-[var(--grove)] font-semibold">
@@ -344,14 +350,14 @@ export default function HomePage() {
             Let's discuss how we can help you pass allocator due diligence and secure institutional commitments—without enterprise overhead.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href="https://calendly.com/chris-groveline"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 text-lg rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
-            >
-              Schedule Discovery Call
-            </a>
+              <a
+                href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 text-lg rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
+              >
+                Schedule a 20-minute Intro
+              </a>
             <Link
               href="/case-studies"
               className="inline-block px-8 py-4 text-lg rounded-2xl bg-white dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors"

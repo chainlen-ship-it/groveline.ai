@@ -10,7 +10,7 @@ import { trackPageView } from './utils/analytics';
 
 export default function AssessmentIntro() {
   useEffect(() => {
-    trackPageView('/assessment', 'Free Operational Readiness Assessment');
+    trackPageView('/assessment', 'Complimentary Operational Readiness Assessment');
   }, []);
 
   return (

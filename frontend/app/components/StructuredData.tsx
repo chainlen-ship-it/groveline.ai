@@ -29,7 +29,7 @@ export default function StructuredData() {
     },
     "sameAs": [
       "https://www.linkedin.com/in/chainlen",
-      "https://calendly.com/chris-groveline"
+      "https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
     ],
     "serviceType": [
       "Fractional COO Services",
@@ -60,7 +60,7 @@ export default function StructuredData() {
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
-      "url": "https://calendly.com/chris-groveline"
+      "url": "https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
     }
   };
 

@@ -20,6 +20,7 @@ export default function FounderEquityCaseStudy() {
         <p className="text-lg text-[var(--muted)]">
           From inception to ~$150M institutional commitment (Anonymized)
         </p>
+        <p className="mt-4 text-sm text-[var(--grove)] font-semibold">Outcome: Operational build enabled ~$150M institutional commitment.</p>
       </div>
 
       <div className="space-y-8">
@@ -28,7 +29,7 @@ export default function FounderEquityCaseStudy() {
           <p className="text-[var(--muted)] leading-relaxed">
             Designed and implemented comprehensive operating model for a founder-led equity fund,
             from initial launch through institutional diligence, ultimately supporting a ~$150M commitment.
-            The project balanced allocator-ready infrastructure with pragmatic execution.
+            The project balanced allocator‑ready infrastructure with pragmatic execution.
           </p>
         </section>
 

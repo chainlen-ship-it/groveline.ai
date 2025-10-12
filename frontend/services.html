@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Groveline | Document Prep and Services</title>
+<style>
+  :root{
+    --bg:#0b1220;
+    --panel:#0f172a;
+    --muted:#1e293b;
+    --text:#e6eefc;
+    --sub:#9fb2d9;
+    --brand:#2dd4bf;
+    --brand-2:#60a5fa;
+    --ok:#34d399;
+    --warn:#fbbf24;
+    --danger:#f87171;
+    --ring: rgba(45,212,191,.35);
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    background: radial-gradient(1200px 600px at 20% -10%, #12213f 0%, var(--bg) 60%), linear-gradient(180deg, #0b1220, #0b1220);
+    color:var(--text);
+  }
+  a{ color: var(--brand-2); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:32px 20px 64px; }
+  header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px; }
+  .logo{ font-weight:700; letter-spacing:.4px; font-size:18px; color:var(--text); }
+  .pill{ background: rgba(96,165,250,.12); color:#cfe2ff; padding:6px 10px; border-radius:999px; font-size:12px; border:1px solid rgba(96,165,250,.35); }
+  .grid{
+    display:grid; grid-template-columns: 280px 1fr 1fr; gap:20px;
+  }
+  @media (max-width: 1024px){
+    .grid{ grid-template-columns: 1fr; }
+  }
+  .panel{
+    background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+    border:1px solid rgba(148,163,184,.16);
+    border-radius: var(--radius);
+    padding:18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px rgba(255,255,255,.04);
+  }
+  .panel h3{ margin:6px 0 8px; font-size:16px; letter-spacing:.2px; }
+  .panel p, .small{ color:var(--sub); font-size:14px; line-height:1.45; margin:0 0 10px; }
+  .menu{ display:flex; flex-direction:column; gap:10px; }
+  .menu a{
+    display:block; padding:10px 12px; border-radius:12px;
+    background: rgba(30,41,59,.35); border:1px solid rgba(148,163,184,.18);
+    color:var(--text); font-size:14px; text-decoration:none;
+  }
+  .menu a:hover{ border-color: rgba(96,165,250,.45); box-shadow: 0 0 0 3px var(--ring) }
+  .chip{ display:inline-block; padding:4px 8px; border-radius:999px; font-size:12px; border:1px solid rgba(148,163,184,.25); color:var(--sub); background: rgba(148,163,184,.08)}
+  .price{ font-size:24px; font-weight:700; color:#eaf2ff; margin:6px 0 2px; }
+  .cta{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color:#0b1220; font-weight:700; border:none; border-radius:12px; padding:11px 14px; margin-top:8px;
+    cursor:pointer; text-decoration:none;
+    box-shadow: 0 8px 20px rgba(45,212,191,.22), 0 2px 0 rgba(255,255,255,.08) inset;
+  }
+  .cta.secondary{
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color:#e6eefc; border:1px solid rgba(148,163,184,.25);
+    box-shadow: none;
+  }
+  .list{ display:grid; gap:10px; margin:12px 0; }
+  .item{
+    display:grid; gap:6px; padding:12px; border-radius:12px;
+    background: rgba(30,41,59,.35); border:1px solid rgba(148,163,184,.18);
+  }
+  .item h4{ margin:0; font-size:15px; }
+  .sub{ color:var(--sub); font-size:13px; margin:0; }
+  .badge{ font-size:11px; padding:3px 7px; border-radius:8px; border:1px solid rgba(148,163,184,.25); color:#dbe7ff; background: rgba(96,165,250,.15); }
+  .bundle{ display:grid; gap:12px; }
+  .rows{ display:grid; gap:10px; }
+  .rows .row{ display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px 12px; border-radius:12px; background: rgba(30,41,59,.35); border:1px solid rgba(148,163,184,.18); }
+  .row strong{ font-size:14px; }
+  .row span{ color:var(--sub); font-size:13px; }
+  .packs{ display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; }
+  @media (max-width: 640px){ .packs{ grid-template-columns: 1fr; } }
+  .pack{
+    padding:14px; border-radius:14px; background: rgba(30,41,59,.45); border:1px solid rgba(148,163,184,.22);
+  }
+  .pack h4{ margin:0 0 2px; font-size:16px; }
+  .pack .price{ margin:2px 0 8px; }
+  .pack ul{ margin:8px 0 0 16px; padding:0; color:var(--sub); font-size:14px; }
+  .note{ margin-top:10px; font-size:12px; color:var(--sub); }
+  footer{ margin-top:24px; font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Groveline</div>
+      <span class="pill">Built by operators for allocators</span>
+    </header>
+
+    <div class="grid">
+
+      <!-- LEFT: Document Prep Menu -->
+      <aside class="panel" aria-label="Document Prep">
+        <h3>Document Prep</h3>
+        <p class="small">Fast, allocator friendly, fixed price.</p>
+        <nav class="menu">
+          <a href="#ddq">
+            <div class="rows">
+              <div class="row">
+                <strong>DDQ Accelerator</strong><span class="chip">$1,000</span>
+              </div>
+              <p class="sub">Modern DDQ draft, gaps list, 1 hr walkthrough</p>
+            </div>
+          </a>
+          <a href="#odd">
+            <div class="rows">
+              <div class="row">
+                <strong>Ops DD Lite</strong><span class="chip">$1,500</span>
+              </div>
+              <p class="sub">10 to 12 page ops summary, heatmap, 1 hr read out</p>
+            </div>
+          </a>
+          <a href="#calendar">
+            <div class="rows">
+              <div class="row">
+                <strong>Compliance Calendar</strong><span class="chip">$1,000</span>
+              </div>
+              <p class="sub">Reg and internal filing calendar with tasks and owners</p>
+            </div>
+          </a>
+          <a href="#policy">
+            <div class="rows">
+              <div class="row">
+                <strong>Policy Modernization Pack</strong><span class="chip">$1,500–$3,000</span>
+              </div>
+              <p class="sub">AI, cyber, valuation, BCP, personal trading updates</p>
+            </div>
+          </a>
+          <a href="#mockcall">
+            <div class="rows">
+              <div class="row">
+                <strong>Mock LP Diligence Call</strong><span class="chip">$500</span>
+              </div>
+              <p class="sub">Recorded session with red flag feedback</p>
+            </div>
+          </a>
+          <a href="#dataroom">
+            <div class="rows">
+              <div class="row">
+                <strong>Data Room Setup</strong><span class="chip">$500</span>
+              </div>
+              <p class="sub">Folder design, naming, must have exhibits</p>
+            </div>
+          </a>
+          <a href="#adv">
+            <div class="rows">
+              <div class="row">
+                <strong>ADV and Web Sweep</strong><span class="chip">$750</span>
+              </div>
+              <p class="sub">Check ADV vs site vs socials for consistency</p>
+            </div>
+          </a>
+        </nav>
+
+        <div class="item" id="ddq">
+          <h4>DDQ Accelerator</h4>
+          <p class="sub">Draft in your format or ours. Includes gaps list and 1 hr walkthrough. Scope assumes up to 10 core docs and one vehicle.</p>
+          <div class="price">$1,000</div>
+          <a class="cta" href="#contact">Start DDQ</a>
+        </div>
+
+        <div class="item" id="odd">
+          <h4>Ops DD Lite</h4>
+          <p class="sub">Concise report plus heatmap and 30 60 90 day roadmap. One strategy or vehicle, right sized for emerging and boutique teams.</p>
+          <div class="price">$1,500</div>
+          <a class="cta" href="#contact">Start Ops DD</a>
+        </div>
+
+      </aside>
+
+      <!-- MIDDLE: Bundled Doc Prep -->
+      <section class="panel">
+        <h3>Bundled Doc Prep</h3>
+        <p class="small">Pick two or more and we will package price and coordinate delivery.</p>
+
+        <div class="bundle">
+          <div class="rows">
+            <div class="row">
+              <strong>Raise Ready Bundle</strong><span class="badge">Popular</span>
+            </div>
+            <div class="row">
+              <span>DDQ Accelerator + Ops DD Lite + Data Room Setup</span>
+              <span class="chip">Contact sales</span>
+            </div>
+          </div>
+
+          <div class="rows">
+            <div class="row">
+              <strong>Compliance Core</strong>
+            </div>
+            <div class="row">
+              <span>Compliance Calendar + Policy Modernization Pack</span>
+              <span class="chip">Contact sales</span>
+            </div>
+          </div>
+
+          <div class="rows">
+            <div class="row">
+              <strong>Launch Readiness</strong>
+            </div>
+            <div class="row">
+              <span>Ops DD Lite + ADV and Web Sweep + Mock LP Call</span>
+              <span class="chip">Contact sales</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h4>What you get</h4>
+            <p class="sub">One plan, one timeline, one review call. We map dependencies, remove duplicate asks, and deliver a clean set that is easy to hand to an allocator.</p>
+            <a class="cta" id="contact" href="mailto:sales@groveline.ai?subject=Groveline Bundled Doc Prep">Contact sales</a>
+            <a class="cta secondary" href="#intake">See intake checklist</a>
+          </div>
+        </div>
+
+        <div class="note">
+          Scope guardrails: fixed price assumes standard inputs, two revision cycles within 14 days, editable files included. Rush is available.
+        </div>
+      </section>
+
+      <!-- RIGHT: Ongoing Services -->
+      <section class="panel">
+        <h3>Ongoing Services</h3>
+        <p class="small">Specific outcomes, backed by a simple rate of 300 per hour. Hours are drawdown packs that you can apply to the work that matters this quarter.</p>
+
+        <div class="packs">
+          <div class="pack">
+            <h4>Focused Pack</h4>
+            <div class="price">$3,000</div>
+            <p class="sub">10 hours you can use for any of the items below.</p>
+            <ul>
+              <li>Registration prep and filings</li>
+              <li>Ops DD prep and LP responses</li>
+              <li>Launch readiness tasks and checklists</li>
+              <li>Ongoing reconciliation and control reviews</li>
+            </ul>
+            <a class="cta" href="mailto:sales@groveline.ai?subject=Focused Pack (10h)">Get Focused Pack</a>
+          </div>
+
+          <div class="pack">
+            <h4>Growth Pack</h4>
+            <div class="price">$9,000</div>
+            <p class="sub">30 hours for a deeper push on controls and prep.</p>
+            <ul>
+              <li>AI governance and cyber uplift</li>
+              <li>Filing calendar and attestations build out</li>
+              <li>LP meeting prep with mock calls</li>
+              <li>Vendor transitions and playbooks</li>
+            </ul>
+            <a class="cta" href="mailto:sales@groveline.ai?subject=Growth Pack (30h)">Get Growth Pack</a>
+          </div>
+
+          <div class="pack">
+            <h4>Scale Pack</h4>
+            <div class="price">$15,000</div>
+            <p class="sub">50 hours for multi stream initiatives with clear outcomes.</p>
+            <ul>
+              <li>End to end launch readiness</li>
+              <li>ODD findings to green plan execution</li>
+              <li>Policy modernization with training</li>
+              <li>Data room and evidence file program</li>
+            </ul>
+            <a class="cta" href="mailto:sales@groveline.ai?subject=Scale Pack (50h)">Get Scale Pack</a>
+          </div>
+        </div>
+
+        <div class="item" style="margin-top:12px">
+          <h4>How packs work</h4>
+          <p class="sub">You get a named lead, a simple plan, and a weekly checkpoint. Hours draw down as we ship. If you prefer a monthly retainer we can mirror these sizes as monthly bands.</p>
+          <a class="cta secondary" href="mailto:sales@groveline.ai?subject=Ask about Monthly Retainer">Ask about a retainer</a>
+        </div>
+
+        <div class="note">
+          Examples of eligible work: registration prep, ops DD prep, launch readiness, reconciliation support, AI governance, cyber control updates, filing calendars, LP follow ups. Rate is 300 per hour across all packs.
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Optional Intake Checklist -->
+    <footer id="intake">
+      <strong>Intake checklist</strong>
+      <div class="list" style="margin-top:8px">
+        <div class="item">
+          <h4>Core docs</h4>
+          <p class="sub">PPM or OM, Compliance Manual, Code of Ethics, Valuation memo, BCP and DR, Cyber, Trade and allocation, Org chart, Service provider list, ADV or BD filings.</p>
+        </div>
+        <div class="item">
+          <h4>Access</h4>
+          <p class="sub">Data room link with view access and a single point of contact for clarifications.</p>
+        </div>
+        <div class="item">
+          <h4>Deliverables</h4>
+          <p class="sub">Editable Word and PDF, a prioritized gaps list, and a one hour walkthrough or read out.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

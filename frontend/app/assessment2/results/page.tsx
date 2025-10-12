@@ -452,12 +452,12 @@ export default function AssessmentResults() {
             onClick={() =>
               trackEvent('assessment_cta_clicked', {
                 event_category: 'conversion',
-                event_label: 'Schedule Discovery Call from Results',
+                event_label: 'Schedule Intro from Results',
               })
             }
             className="px-8 py-3 rounded-xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
           >
-            Schedule Discovery Call
+            Schedule a 20-minute Intro
           </a>
         </div>
 

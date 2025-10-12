@@ -28,7 +28,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="px-3 py-2 rounded-lg bg-forest hover:bg-forest-dark text-white transition-colors text-sm md:text-base font-semibold"
           >
-            Book a Call
+            Schedule a 20-minute Intro
           </a>
 
           {/* Hamburger Menu Button */}
@@ -57,6 +57,13 @@ export default function Header() {
 
           {/* Menu Panel */}
           <div className="absolute right-4 top-16 w-64 bg-white dark:bg-[var(--panel)] border border-[var(--border)] rounded-lg shadow-lg z-50 py-2">
+            <Link
+              href="/services"
+              className="block px-4 py-3 hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors text-[var(--ink)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </Link>
             <Link
               href="/assessment"
               className="block px-4 py-3 hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors text-[var(--ink)] font-medium"

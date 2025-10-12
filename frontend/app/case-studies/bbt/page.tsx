@@ -21,6 +21,7 @@ export default function BBTCaseStudy() {
         <p className="text-lg text-[var(--muted)]">
           From a five-person job to a one-hour solo workflow
         </p>
+        <p className="mt-4 text-sm text-[var(--grove)] font-semibold">Outcome: Reduced option expiry from 5 people to 1 hour; resilient through later OCC changes.</p>
       </div>
 
       <div className="space-y-8">

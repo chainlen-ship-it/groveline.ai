@@ -13,9 +13,15 @@ export default function TermsAndConditions() {
         </Link>
       </div>
 
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[var(--grove)]">Terms and Conditions</h1>
+  <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[var(--grove)]">Terms &amp; Conditions</h1>
 
-      <div className="space-y-6 text-[var(--muted)]">
+  <div className="space-y-6 text-[var(--muted)]">
+    <div className="forest-card p-4 md:p-5">
+      <p className="text-sm">
+        <strong>TL;DR:</strong> The assessment is educational and not professional advice. For formal work, we use a separate service agreement.
+        By using the site, you agree to these terms. Questions? Email <a href="mailto:hello@groveline.ai" className="text-[var(--forest)] hover:underline">hello@groveline.ai</a>.
+      </p>
+    </div>
         <p className="text-sm text-[var(--muted)]">
           <strong>Last Updated:</strong> January 9, 2025
         </p>
@@ -23,7 +29,7 @@ export default function TermsAndConditions() {
         <section>
           <h2 className="text-2xl font-bold text-[var(--grove)] mb-4">1. Agreement to Terms</h2>
           <p>
-            By accessing or using the website groveline.ai (the "Site") and services provided by Groveline Advisor Services ("Groveline", "we", "us", or "our"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our Site or services.
+            By accessing or using the website groveline.ai (the "Site") and services provided by Groveline Advisor Services ("Groveline", "we", "us", or "our"), you agree to be bound by these Terms &amp; Conditions ("Terms"). If you do not agree to these Terms, please do not use our Site or services.
           </p>
         </section>
 
@@ -47,7 +53,7 @@ export default function TermsAndConditions() {
 
           <h3 className="text-xl font-semibold text-[var(--ink)] mb-3 mt-4">3.1 Nature of Assessment</h3>
           <p className="mb-3">
-            Our free Operational Readiness Assessment is an educational tool designed to help investment managers identify potential operational gaps and opportunities for improvement. The assessment:
+            Our complimentary Operational Readiness Assessment is an educational tool designed to help investment managers identify potential operational gaps and opportunities for improvement. The assessment:
           </p>
           <ul className="list-disc ml-6 space-y-2">
             <li>Is provided for informational purposes only</li>
@@ -102,7 +108,7 @@ export default function TermsAndConditions() {
             <li>GROVELINE PROVIDES THE SITE AND ASSESSMENT TOOL "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED</li>
             <li>WE DISCLAIM ALL WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT</li>
             <li>WE ARE NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OUR SITE OR SERVICES</li>
-            <li>OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THE FREE ASSESSMENT TOOL SHALL NOT EXCEED $100</li>
+            <li>OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THE COMPLIMENTARY ASSESSMENT TOOL SHALL NOT EXCEED $100</li>
             <li>WE ARE NOT RESPONSIBLE FOR DECISIONS MADE BASED ON ASSESSMENT RESULTS OR INFORMATION PROVIDED ON OUR SITE</li>
           </ul>
         </section>
@@ -221,7 +227,7 @@ export default function TermsAndConditions() {
 
         <section className="mt-8 p-4 bg-[#f0f7f0] dark:bg-[#0f1410] border-l-4 border-[var(--forest)] rounded">
           <p className="text-sm">
-            <strong className="text-[var(--grove)]">Acknowledgment:</strong> By using our Site and services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.
+            <strong className="text-[var(--grove)]">Acknowledgment:</strong> By using our Site and services, you acknowledge that you have read, understood, and agree to be bound by these Terms &amp; Conditions.
           </p>
         </section>
       </div>

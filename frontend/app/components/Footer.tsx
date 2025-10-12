@@ -13,9 +13,10 @@ export default function Footer() {
           style={{ filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.25))' }}
         />
         <div className="space-y-2 text-sm md:text-base">
-          <div>Dallas, Texas<a href="mailto:hello@groveline.ai" className="hover:underline">hello@groveline.ai</a></div>
           <div>
-            <a
+            Need help? Email <a href="mailto:hello@groveline.ai" className="hover:underline">hello@groveline.ai</a>. We usually reply within one business day.
+          </div>
+          <div>Dallas, Texas • <a
               href="https://www.linkedin.com/in/chainlen"
               target="_blank"
               rel="noopener noreferrer"
@@ -28,7 +29,7 @@ export default function Footer() {
         <div className="mt-6 text-xs md:text-sm">
           <a href="/privacy" className="hover:underline opacity-75 hover:opacity-100">Privacy Policy</a>
           <span className="mx-2 opacity-50">•</span>
-          <a href="/terms" className="hover:underline opacity-75 hover:opacity-100">Terms and Conditions</a>
+          <a href="/terms" className="hover:underline opacity-75 hover:opacity-100">Terms &amp; Conditions</a>
         </div>
         <div className="mt-4 text-xs md:text-sm opacity-75">
           © 2025 Groveline Advisor Services. All rights reserved.

@@ -78,7 +78,7 @@ export function AssessmentForm() {
               className="w-5 h-5 mt-0.5 text-[var(--forest)] focus:ring-2 focus:ring-[var(--forest)] rounded border-[var(--border)] disabled:opacity-50 disabled:cursor-not-allowed"
             />
             <span className="text-sm text-[var(--ink)]">
-              I agree to receive my assessment results and understand my information will be used in accordance with Groveline's <a href="/privacy" target="_blank" className="text-[var(--forest)] hover:underline">Privacy Policy</a> and <a href="/terms" target="_blank" className="text-[var(--forest)] hover:underline">Terms of Service</a>.
+              I agree to receive my assessment results and understand my information will be used in accordance with Groveline's <a href="/privacy" target="_blank" className="text-[var(--forest)] hover:underline">Privacy Policy</a> and <a href="/terms" target="_blank" className="text-[var(--forest)] hover:underline">Terms &amp; Conditions</a>.
             </span>
           </label>
           <FormError message={errors.consent} id="consent-error" />

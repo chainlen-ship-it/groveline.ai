@@ -20,6 +20,7 @@ export default function AllocatorPlatformCaseStudy() {
         <p className="text-lg text-[var(--muted)]">
           Building institutional-grade systems to support ~$200M allocation (Anonymized)
         </p>
+        <p className="mt-4 text-sm text-[var(--grove)] font-semibold">Outcome: Supported ~$200M allocation with zero spreadsheet dependencies.</p>
       </div>
 
       <div className="space-y-8">

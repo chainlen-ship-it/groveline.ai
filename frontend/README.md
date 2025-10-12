@@ -2,10 +2,10 @@
 
 **Fractional COO & Operations Support for Emerging and Mid-Sized Managers**  
 
-Groveline helps funds and service-oriented businesses get **allocator-ready** — balancing the polish institutional allocators expect with the pragmatism growing teams need.  
+Groveline helps funds and service-oriented businesses get **allocator‑ready** — balancing the polish institutional allocators expect with the pragmatism growing teams need.  
 
 🔗 **Live Site:** [https://groveline.ai](https://groveline.ai)  
-📅 **Book a Call:** [Calendly](https://calendly.com/chris-groveline)  
+📅 **Schedule a 20‑minute Intro:** [Outlook Bookings](https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink)  
 💼 **LinkedIn:** [Chris Hainlen](https://www.linkedin.com/in/chainlen/)  
 
 ---
@@ -25,7 +25,7 @@ Groveline helps funds and service-oriented businesses get **allocator-ready** �
 ## 📚 Case Studies
 - **GMAM:** SQL + Excel-based trade approval system that eliminated paper sign-offs.  
 - **BBT:** Automated option expiry workflow — reduced a 5-person job to 1-hour solo process.  
-- **Institutional vs Pragmatic Launches (Anonymous):** Lessons from building allocator-ready systems for both institutional-grade and founder-led funds.  
+- **Institutional vs Pragmatic Launches (Anonymous):** Lessons from building allocator‑ready systems for both institutional‑grade and founder‑led funds.  
 
 See all case studies at: [groveline.ai/case-studies](https://groveline.ai/case-studies)  
 
@@ -49,7 +49,7 @@ Explore more at: [groveline.ai/insights](https://groveline.ai/insights)
 
 ## 📬 Contact
 If you know a manager who is close to a raise but missing key operational pieces:  
-👉 Book directly at [Calendly](https://calendly.com/chris-groveline)  
+👉 Book directly via [Outlook Bookings](https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink)  
 👉 Or connect on [LinkedIn](https://www.linkedin.com/in/chainlen/)  
 
 ---

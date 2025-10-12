@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Institutional vs Pragmatic Launches – Groveline.ai",
-  description: "Lessons from building allocator-ready systems for both institutional-grade and founder-led funds",
+  description: "Lessons from building allocator‑ready systems for both institutional‑grade and founder‑led funds",
 };
 
 export default function InstitutionalVsPragmaticCaseStudy() {
@@ -18,8 +18,9 @@ export default function InstitutionalVsPragmaticCaseStudy() {
           Case Study: Institutional vs Pragmatic Launches
         </h1>
         <p className="text-lg text-[var(--muted)]">
-          Lessons from building allocator-ready systems for both institutional-grade and founder-led funds
+          Lessons from building allocator‑ready systems for both institutional‑grade and founder‑led funds
         </p>
+        <p className="mt-4 text-sm text-[var(--grove)] font-semibold">Outcome: A practical path to allocator credibility with staged, pragmatic build-outs.</p>
       </div>
 
       <div className="space-y-8">
@@ -59,7 +60,7 @@ export default function InstitutionalVsPragmaticCaseStudy() {
               Pragmatic Build
             </h2>
             <p className="text-[var(--muted)] leading-relaxed mb-4">
-              The founder-driven launch focused on "allocator-ready enough."
+              The founder-driven launch focused on "allocator‑ready enough."
               Lightweight systems and policies supported fundraising without
               unnecessary drag. The fund scaled later with added polish.
             </p>
@@ -122,7 +123,7 @@ export default function InstitutionalVsPragmaticCaseStudy() {
           </p>
           <div className="bg-white/50 dark:bg-black/20 p-4 rounded-lg border border-[var(--border)]">
             <p className="text-sm text-[var(--grove)] font-semibold">
-              The Sweet Spot: Build allocator-ready operations with realistic budgets,
+              The Sweet Spot: Build allocator‑ready operations with realistic budgets,
               then scale infrastructure as commitments grow.
             </p>
           </div>

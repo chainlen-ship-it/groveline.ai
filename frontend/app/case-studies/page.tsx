@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Case Studies – Groveline.ai",
-  description: "Real examples of balancing rigor and pragmatism to get managers allocator-ready",
+  description: "Real examples of balancing rigor and pragmatism to get managers allocator‑ready",
 };
 
 export default function CaseStudiesPage() {
@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
       </h1>
       <p className="text-center text-[var(--muted)] mb-12 max-w-3xl mx-auto">
         Real examples of balancing institutional rigor with pragmatic execution,
-        helping managers get allocator-ready without the overhead.
+        helping managers get allocator‑ready without the overhead.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -43,7 +43,7 @@ export default function CaseStudiesPage() {
           <span className="forest-badge">Strategy</span>
           <h3 className="text-xl font-bold mt-4 mb-3">Institutional vs Pragmatic Launches</h3>
           <p className="text-[var(--muted)] mb-4">
-            Lessons from building allocator-ready systems for both institutional-grade and founder-led funds.
+            Lessons from building allocator‑ready systems for both institutional‑grade and founder‑led funds.
           </p>
           <span className="text-forest font-semibold hover:underline">Read case study →</span>
         </Link>
@@ -131,18 +131,18 @@ export default function CaseStudiesPage() {
       {/* CTA */}
       <section className="mt-16 text-center">
         <h2 className="text-2xl font-bold mb-4 text-[var(--grove)]">
-          Ready to Get Allocator-Ready?
+          Ready to get allocator‑ready?
         </h2>
         <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto">
           Let's discuss how we can help your fund balance institutional polish with pragmatic execution.
         </p>
         <a
-          href="https://calendly.com/chris-groveline"
+          href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
         >
-          Book a 20-minute intro
+          Schedule a 20-minute Intro
         </a>
       </section>
     </div>
