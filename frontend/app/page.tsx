@@ -24,7 +24,7 @@ export default function HomePage() {
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
           <Link
-            href="/assessment2"
+            href="/assessment"
             className="inline-block px-6 py-3 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
           >
             Complimentary Operational Assessment
@@ -60,7 +60,7 @@ export default function HomePage() {
             </div>
             <div className="flex-shrink-0">
               <Link
-                href="/assessment2"
+                href="/assessment"
                 className="inline-block px-8 py-4 rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity whitespace-nowrap"
               >
                 Start Complimentary Assessment →

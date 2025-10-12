@@ -58,7 +58,7 @@ export default function Header() {
           {/* Menu Panel */}
           <div className="absolute right-4 top-16 w-64 bg-white dark:bg-[var(--panel)] border border-[var(--border)] rounded-lg shadow-lg z-50 py-2">
             <Link
-              href="/assessment2"
+              href="/assessment"
               className="block px-4 py-3 hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors text-[var(--ink)] font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
