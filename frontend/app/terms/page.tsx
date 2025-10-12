@@ -215,7 +215,6 @@ export default function TermsAndConditions() {
             <p><strong className="text-[var(--grove)]">Groveline Advisor Services</strong></p>
             <p>Legal Inquiries: <a href="mailto:legal@groveline.ai" className="text-[var(--forest)] hover:underline">legal@groveline.ai</a></p>
             <p>General Contact: <a href="mailto:hello@groveline.ai" className="text-[var(--forest)] hover:underline">hello@groveline.ai</a></p>
-            <p>Phone: <a href="tel:903-605-6399" className="text-[var(--forest)] hover:underline">903-605-6399</a></p>
             <p>Location: Dallas, Texas</p>
           </div>
         </section>

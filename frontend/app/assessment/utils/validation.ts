@@ -1,10 +1,11 @@
 export interface ValidationErrors {
   name: string;
   email: string;
+  consent: string;
 }
 
-export function validateAssessmentForm(name: string, email: string): ValidationErrors {
-  const errors: ValidationErrors = { name: '', email: '' };
+export function validateAssessmentForm(name: string, email: string, consent: boolean): ValidationErrors {
+  const errors: ValidationErrors = { name: '', email: '', consent: '' };
 
   // Name validation
   if (!name.trim()) {
@@ -18,6 +19,11 @@ export function validateAssessmentForm(name: string, email: string): ValidationE
     errors.email = 'Email is required';
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errors.email = 'Please enter a valid email';
+  }
+
+  // Consent validation
+  if (!consent) {
+    errors.consent = 'Please agree to the terms to proceed.';
   }
 
   return errors;

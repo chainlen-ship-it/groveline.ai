@@ -19,8 +19,8 @@ interface AssessmentState {
   openResponses: Record<OpenEndedQuestionId, string>;
 
   // Metadata
-  startedAt?: Date;
-  submittedAt?: Date;
+  startedAt?: string; // ISO timestamp
+  submittedAt?: string; // ISO timestamp
   isComplete: boolean;
 
   // Actions
@@ -90,8 +90,8 @@ export const useAssessment = create<AssessmentState>()(
         return maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0;
       },
 
-      setStartedAt: () => set({ startedAt: new Date() }),
-      setSubmittedAt: () => set({ submittedAt: new Date() }),
+      setStartedAt: () => set({ startedAt: new Date().toISOString() }),
+      setSubmittedAt: () => set({ submittedAt: new Date().toISOString() }),
       setComplete: (value) => set({ isComplete: value }),
 
       reset: () =>

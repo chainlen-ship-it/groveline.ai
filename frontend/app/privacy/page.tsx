@@ -139,7 +139,6 @@ export default function PrivacyPolicy() {
             <p><strong className="text-[var(--grove)]">Groveline Advisor Services</strong></p>
             <p>Privacy Inquiries: <a href="mailto:privacy@groveline.ai" className="text-[var(--forest)] hover:underline">privacy@groveline.ai</a></p>
             <p>General Contact: <a href="mailto:hello@groveline.ai" className="text-[var(--forest)] hover:underline">hello@groveline.ai</a></p>
-            <p>Phone: <a href="tel:903-605-6399" className="text-[var(--forest)] hover:underline">903-605-6399</a></p>
             <p>Location: Dallas, Texas</p>
           </div>
         </section>

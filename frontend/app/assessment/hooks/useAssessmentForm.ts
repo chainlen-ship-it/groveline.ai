@@ -15,7 +15,8 @@ export function useAssessmentForm() {
   const { setUserInfo, setStartedAt } = useAssessment();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [errors, setErrors] = useState<ValidationErrors>({ name: '', email: '' });
+  const [consent, setConsent] = useState(false);
+  const [errors, setErrors] = useState<ValidationErrors>({ name: '', email: '', consent: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -34,11 +35,19 @@ export function useAssessmentForm() {
     }
   };
 
+  const handleConsentChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setConsent(e.target.checked);
+    // Clear error when user checks the box
+    if (errors.consent) {
+      setErrors((prev) => ({ ...prev, consent: '' }));
+    }
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validate form
-    const validationErrors = validateAssessmentForm(name, email);
+    const validationErrors = validateAssessmentForm(name, email, consent);
     setErrors(validationErrors);
 
     if (hasValidationErrors(validationErrors)) {
@@ -59,8 +68,12 @@ export function useAssessmentForm() {
       setUserInfo(name, email);
       setStartedAt();
 
-      // Navigate to quiz
-      router.push('/assessment/quiz');
+      // Navigate to quiz (static export safe)
+      try {
+        router.push('/assessment/quiz.html');
+      } catch {
+        window.location.assign('/assessment/quiz.html');
+      }
     } catch (error) {
       console.error('Error starting assessment:', error);
       setIsSubmitting(false);
@@ -70,10 +83,12 @@ export function useAssessmentForm() {
   return {
     name,
     email,
+    consent,
     errors,
     isSubmitting,
     handleNameChange,
     handleEmailChange,
+    handleConsentChange,
     handleSubmit,
   };
 }

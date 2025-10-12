@@ -370,10 +370,6 @@ export default function HomePage() {
                 hello@groveline.ai
               </a>
               <span>•</span>
-              <a href="tel:903-605-6399" className="hover:text-[var(--forest)] transition-colors">
-                903-605-6399
-              </a>
-              <span>•</span>
               <a
                 href="https://www.linkedin.com/in/chainlen"
                 target="_blank"

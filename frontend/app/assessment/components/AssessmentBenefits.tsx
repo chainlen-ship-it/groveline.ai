@@ -7,14 +7,13 @@ export function AssessmentBenefits() {
           It's the classic chicken-or-egg question: Do you build strong operations to attract investors, or to protect your fund from failure?
         </p>
         <p className="text-lg font-semibold text-[var(--grove)]">
-          That is all academic, and it doesn't matter which comes first. The priority is efficient, risk mitigating, institutional-quality infrastructure that you need either way.
+          The truth? It doesn't matter which comes first. You need institutional-quality infrastructure either way.
         </p>
       </div>
 
-
       {/* Readiness Hook */}
       <div className="forest-card p-8 md:p-10 mb-10 bg-gradient-to-br from-[#e8f5e8] to-[#f0f7f0] dark:from-[#0f1511] dark:to-[#0f1410]">
-        <h2 className="text-2xl font-bold mb-4 text-[var(--grove)]">We Can Help You Build a Solid Infrastructure</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[var(--grove)]">Find Out Where You Stand</h2>
         <p className="text-lg text-[var(--muted)] mb-6">
           Our assessment evaluates your operational infrastructure across the key areas allocators scrutinize:
         </p>
