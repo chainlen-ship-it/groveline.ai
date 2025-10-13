@@ -1,289 +1,272 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Services – Groveline.ai',
+  title: 'Services & Pricing – Groveline.ai',
   description:
-    'Operator‑led services for allocator‑ready operations: fund launch infrastructure, compliance & governance, vendor architecture, automation, and ODD prep.',
+    'Clear outcomes. Fixed pricing. Launch with confidence. Institutional-grade operations infrastructure for emerging investment managers.',
 };
 
 export default function ServicesPage() {
   return (
-    <div className="max-w-[1120px] mx-auto px-4 md:px-0 py-12 md:py-16">
-      {/* Hero */}
-      <header className="text-center mb-10 md:mb-14">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--grove)] leading-tight">
-          Services & Pricing
+    <div className="max-w-[1200px] mx-auto px-4 py-12 md:py-16">
+      {/* Header */}
+      <header className="text-center mb-12 md:mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--grove)]">
+          Services & <span className="text-[var(--forest)]">Pricing</span>
         </h1>
-        <p className="max-w-[900px] mx-auto text-lg md:text-xl text-[var(--muted)]">
-          Clear scopes. Fixed‑fee options. Operator‑led delivery.
+        <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto">
+          Clear outcomes. Fixed pricing. Launch with confidence.
         </p>
       </header>
 
-      {/* Three Cards */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Card 1: Document Prep */}
-        <div className="forest-card p-6 md:p-8">
-          <h2 className="text-2xl font-bold mb-2 text-[var(--grove)]">Document Prep (Fast & Fixed‑Fee)</h2>
-          <p id="doc-scope" className="text-xs text-[var(--muted)] mt-2 mb-3">Standard inputs, two revisions in 14 days, editable files. Rush available.</p>
-          <p className="text-sm text-[var(--muted)] mb-4">Fast, allocator‑friendly, fixed price.</p>
-          <ul className="text-[var(--muted)] space-y-3">
-            <li className="flex items-start justify-between gap-3">
-              <span>DDQ Accelerator</span>
-              <span className="flex items-baseline gap-2">
-                <a
-                  href={`mailto:hello@groveline.ai?subject=Start DDQ Accelerator&body=Hi Groveline,%0A%0AI'd like to start DDQ Accelerator.%0A%0AFirm: ____%0ADocs URL: ____%0APhone: ____%0APreferred window: ____%0AQuestions: ____%0A%0APrice: $1,000 (acknowledged)`}
-                  aria-label="Email to start DDQ Accelerator"
-                  className="font-bold underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-[var(--forest)] rounded"
-                >
-                  $1,000
-                </a>
-                <span className="text-xs">Saves ~20–40 hours</span>
-              </span>
-            </li>
+      {/* Tiers */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
+        {/* Tier 1: Launch Ready */}
+        <div className="forest-card p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#e8f5e8] dark:bg-[#1a2e1a] text-[var(--forest)] text-xs font-semibold uppercase tracking-wide mb-4">
+            Perfect for: Emerging Managers
+          </span>
+          <h3 className="text-2xl font-bold text-[var(--grove)] mb-3">Launch Ready</h3>
+          <p className="text-[var(--muted)] mb-6">
+            Everything you need to get to market fast
+          </p>
+          <div className="mb-2">
+            <span className="text-4xl font-bold text-[var(--grove)]">$3K–$8K</span>
+          </div>
+          <p className="text-sm text-[var(--muted)] mb-6">One-time project</p>
 
-            <li className="flex items-start justify-between gap-3">
-              <span>Ops DD Lite</span>
-              <span className="flex items-baseline gap-2">
-                <a
-                  href={`mailto:hello@groveline.ai?subject=Start Ops DD Lite&body=Hi Groveline,%0A%0AI'd like Ops DD Lite.%0A%0AFirm: ____%0AStrategy/vehicle: ____%0AKey docs: ____%0APhone: ____%0APreferred window: ____%0AQuestions: ____%0A%0APrice: $1,500 (acknowledged)`}
-                  aria-label="Email to start Ops DD Lite"
-                  className="font-bold underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-[var(--forest)] rounded"
-                >
-                  $1,500
-                </a>
-                <span className="text-xs">Saves ~25–50 hours</span>
-              </span>
+          <ul className="space-y-3 mb-8 flex-grow">
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Core compliance documents ready in 14 days</span>
             </li>
-
-            <li className="flex items-start justify-between gap-3">
-              <span>Policy Modernization</span>
-              <span className="flex items-baseline gap-2">
-                <a
-                  href={`mailto:hello@groveline.ai?subject=Start Policy Modernization&body=Hi Groveline,%0A%0AWe need policy updates (AI, cyber, valuation, BCP, personal trading).%0A%0AFirm: ____%0ACurrent policy locations: ____%0APhone: ____%0APreferred window: ____%0AQuestions: ____%0A%0APrice: $1,500–$3,000 (acknowledged)`}
-                  aria-label="Email to start Policy Modernization"
-                  className="font-bold underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-[var(--forest)] rounded"
-                >
-                  $1,500–$3,000
-                </a>
-                <span className="text-xs">Saves ~15–30 hours</span>
-              </span>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Professional data room setup</span>
             </li>
-
-            <li className="flex items-start justify-between gap-3">
-              <span>Mock LP Diligence Call</span>
-              <span className="flex items-baseline gap-2">
-                <a
-                  href={`mailto:hello@groveline.ai?subject=Schedule Mock LP Diligence Call&body=Hi Groveline,%0A%0APlease schedule a mock LP diligence call.%0A%0AFirm: ____%0ATeam attendees: ____%0APhone: ____%0APreferred window: ____%0AQuestions: ____%0A%0APrice: $500 (acknowledged)`}
-                  aria-label="Email to schedule Mock LP Diligence Call"
-                  className="font-bold underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-[var(--forest)] rounded"
-                >
-                  $500
-                </a>
-                <span className="text-xs">Saves ~5–10 hours</span>
-              </span>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>LP-ready presentation materials</span>
             </li>
-
-            <li className="flex items-start justify-between gap-3">
-              <span>Data Room Setup</span>
-              <span className="flex items-baseline gap-2">
-                <a
-                  href={`mailto:hello@groveline.ai?subject=Start Data Room Setup&body=Hi Groveline,%0A%0APlease help structure our data room.%0A%0AFirm: ____%0ARepository link: ____%0APhone: ____%0APreferred window: ____%0AQuestions: ____%0A%0APrice: $500 (acknowledged)`}
-                  aria-label="Email to start Data Room Setup"
-                  className="font-bold underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-[var(--forest)] rounded"
-                >
-                  $500
-                </a>
-                <span className="text-xs">Saves ~6–12 hours</span>
-              </span>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Two rounds of revisions included</span>
             </li>
-
-            <li className="flex items-start justify-between gap-3">
-              <span>ADV & Web Sweep</span>
-              <span className="flex items-baseline gap-2">
-                <a
-                  href={`mailto:hello@groveline.ai?subject=Start ADV and Web Sweep&body=Hi Groveline,%0A%0APlease review our ADV vs website and socials.%0A%0AFirm: ____%0ALinks: ____%0APhone: ____%0APreferred window: ____%0AQuestions: ____%0A%0APrice: $750 (acknowledged)`}
-                  aria-label="Email to start ADV and Web Sweep"
-                  className="font-bold underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-[var(--forest)] rounded"
-                >
-                  $750
-                </a>
-                <span className="text-xs">Saves ~8–12 hours</span>
-              </span>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Email support throughout</span>
             </li>
           </ul>
-          <p className="text-xs text-[var(--muted)] mt-2">ROI ranges are typical; actual varies by inputs and scope.</p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <a
-              href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Schedule a 20‑minute Intro for Document Prep"
-              aria-describedby="doc-scope"
-              className="px-4 py-2 rounded-xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity focus-visible:ring-2 focus-visible:ring-[var(--forest)]"
-            >
-              Start a 20‑minute Intro
-            </a>
-            <a
-              href="mailto:hello@groveline.ai?subject=Document Prep"
-              aria-label="Email about Document Prep"
-              className="px-4 py-2 rounded-xl bg-white dark:bg-[var(--panel)] text-[var(--grove)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors focus-visible:ring-2 focus-visible:ring-[var(--forest)]"
-            >
-              Email us
-            </a>
-          </div>
+
+          <a
+            href="mailto:hello@groveline.ai?subject=Launch Ready Package&body=Hi Groveline,%0A%0AI'm interested in the Launch Ready package.%0A%0AFirm: ____%0ATarget launch date: ____%0APhone: ____%0AQuestions: ____%0A"
+            className="block w-full px-6 py-3 text-center rounded-xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
+          >
+            Get started
+          </a>
         </div>
 
-        {/* Card 2: Bundled Doc Prep */}
-        <div className="forest-card p-6 md:p-8">
-          <h2 className="text-2xl font-bold mb-2 text-[var(--grove)]">Bundle & Save Time</h2>
-          <p id="bundle-scope" className="text-xs text-[var(--muted)] mt-2 mb-3">Standard inputs, two revisions in 14 days, editable files. Rush available.</p>
-          <p className="text-sm text-[var(--muted)] mb-4">Pick two or more. One plan, one timeline, one review call.</p>
-          <ul className="list-disc pl-5 text-[var(--muted)] space-y-2">
-            <li><strong>Raise Ready</strong>: DDQ + Ops DD Lite + Data Room</li>
-            <li><strong>Compliance Core</strong>: Calendar + Policy Modernization</li>
-            <li><strong>Launch Readiness</strong>: Ops DD Lite + ADV/Web + Mock LP</li>
+        {/* Tier 2: Growth Partner (Popular) */}
+        <div className="forest-card p-8 flex flex-col bg-gradient-to-br from-[#3d6b3d] to-[#4a7c4a] text-white transform md:scale-105 hover:shadow-2xl transition-all relative">
+          <span className="inline-block px-3 py-1 rounded-full bg-yellow-400 text-[#2d4a2d] text-xs font-semibold uppercase tracking-wide mb-4">
+            Perfect for: Capital Raising
+          </span>
+          <h3 className="text-2xl font-bold mb-3">Growth Partner</h3>
+          <p className="mb-6 opacity-90">
+            Complete infrastructure plus ongoing support
+          </p>
+          <div className="mb-2">
+            <span className="text-4xl font-bold">$12K–$18K</span>
+          </div>
+          <p className="text-sm opacity-75 mb-6">Initial setup + 3-6 months support</p>
+
+          <ul className="space-y-3 mb-8 flex-grow">
+            <li className="flex items-start gap-3">
+              <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
+              <span>Everything in Launch Ready</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
+              <span>Advanced LP management systems</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
+              <span>Quarterly compliance updates</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
+              <span>Priority response times</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
+              <span>Strategic advisory calls</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
+              <span>Due diligence preparation</span>
+            </li>
           </ul>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <a
-              href={`mailto:hello@groveline.ai?subject=Bundle pricing&body=We are considering: [Raise Ready | Compliance Core | Launch Readiness].%0AOur target date is ____.`}
-              aria-label="Email to request bundle pricing"
-              className="px-4 py-2 rounded-xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
-            >
-              Contact sales for bundle
-            </a>
-            <a href="#intake" className="px-4 py-2 rounded-xl bg-white dark:bg-[var(--panel)] text-[var(--grove)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors">See intake checklist</a>
-          </div>
-          <p className="text-xs text-[var(--muted)] mt-4">Scope guardrails: standard inputs, two revisions in 14 days, editable files included. Rush available.</p>
+
+          <a
+            href="mailto:hello@groveline.ai?subject=Growth Partner Package&body=Hi Groveline,%0A%0AI'm interested in the Growth Partner package.%0A%0AFirm: ____%0ACurrent AUM/target: ____%0APhone: ____%0AQuestions: ____%0A"
+            className="block w-full px-6 py-3 text-center rounded-xl bg-white text-[#3d6b3d] font-bold hover:bg-[#f5f9f5] transition-colors"
+          >
+            Partner with us
+          </a>
         </div>
 
-        {/* Card 3: Ongoing Services Packs */}
-        <div className="forest-card p-6 md:p-8">
-          <h2 className="text-2xl font-bold mb-2 text-[var(--grove)]">Ongoing Services (Drawdown Packs)</h2>
-          <p id="packs-scope" className="text-xs text-[var(--muted)] mt-2 mb-3">Standard inputs, two revisions in 14 days, editable files. Rush available.</p>
-          <p className="text-sm text-[var(--muted)] mb-4">Outcome‑based work at a simple rate.</p>
-          <div className="space-y-3">
-            <div className="flex items-start justify-between p-3 rounded-lg border border-[var(--border)] bg-white/60 dark:bg-[#0f1410]">
-              <div>
-                <div className="font-semibold text-[var(--ink)]">Focused Pack</div>
-                <div className="text-xs text-[var(--muted)]">10 hours for targeted work</div>
-              </div>
-              <div className="font-bold">$3,000</div>
-            </div>
-            <div className="flex items-start justify-between p-3 rounded-lg border border-[var(--border)] bg-white/60 dark:bg-[#0f1410]">
-              <div>
-                <div className="font-semibold text-[var(--ink)]">Growth Pack</div>
-                <div className="text-xs text-[var(--muted)]">30 hours for deeper push</div>
-              </div>
-              <div className="font-bold">$9,000</div>
-            </div>
-            <div className="flex items-start justify-between p-3 rounded-lg border border-[var(--border)] bg-white/60 dark:bg-[#0f1410]">
-              <div>
-                <div className="font-semibold text-[var(--ink)]">Scale Pack</div>
-                <div className="text-xs text-[var(--muted)]">50 hours for multi‑stream initiatives</div>
-              </div>
-              <div className="font-bold">$15,000</div>
-            </div>
+        {/* Tier 3: Institutional */}
+        <div className="forest-card p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#fff3cd] dark:bg-[#3a3020] text-[#856404] dark:text-[#ffd966] text-xs font-semibold uppercase tracking-wide mb-4">
+            Perfect for: Policy Refresh
+          </span>
+          <h3 className="text-2xl font-bold text-[var(--grove)] mb-3">Institutional</h3>
+          <p className="text-[var(--muted)] mb-6">
+            Your extended operations team
+          </p>
+          <div className="mb-2">
+            <span className="text-4xl font-bold text-[var(--grove)]">Custom</span>
           </div>
-          <p className="text-xs text-[var(--muted)] mt-3">Rate is $300/hour across packs. Retainers available on request.</p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <a href="mailto:hello@groveline.ai?subject=Ongoing Services Packs" className="px-4 py-2 rounded-xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity">Get a pack</a>
-            <a href="mailto:hello@groveline.ai?subject=Ask about Retainer" className="px-4 py-2 rounded-xl bg-white dark:bg-[var(--panel)] text-[var(--grove)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors">Ask about a retainer</a>
-          </div>
+          <p className="text-sm text-[var(--muted)] mb-6">Retainer from $5K/month</p>
+
+          <ul className="space-y-3 mb-8 flex-grow">
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>White-glove dedicated support</span>
+            </li>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Unlimited revisions and updates</span>
+            </li>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>System implementation support</span>
+            </li>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Regulatory change monitoring</span>
+            </li>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Strategic planning sessions</span>
+            </li>
+            <li className="flex items-start gap-3 text-[var(--ink)]">
+              <span className="text-[var(--forest)] font-bold text-lg mt-0.5">✓</span>
+              <span>Same-day response guarantee</span>
+            </li>
+          </ul>
+
+          <a
+            href="mailto:hello@groveline.ai?subject=Institutional Package&body=Hi Groveline,%0A%0AI'm interested in the Institutional package.%0A%0AFirm: ____%0ACurrent AUM: ____%0APhone: ____%0ANeeds: ____%0A"
+            className="block w-full px-6 py-3 text-center rounded-xl bg-white dark:bg-[var(--panel)] text-[var(--grove)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors"
+          >
+            Let's talk
+          </a>
         </div>
       </section>
 
-      {/* Optional intake checklist */}
-      <section id="intake" className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="forest-card p-6">
-          <h3 className="font-semibold text-[var(--grove)] mb-2">Core docs</h3>
-          <p className="text-sm text-[var(--muted)]">PPM/OM, Compliance Manual, Code of Ethics, Valuation, BCP/DR, Cyber, Trade & Allocation, Org chart, Provider list, ADV.</p>
-        </div>
-        <div className="forest-card p-6">
-          <h3 className="font-semibold text-[var(--grove)] mb-2">Access</h3>
-          <p className="text-sm text-[var(--muted)]">Data room link (view access) and a single point of contact for clarifications.</p>
-        </div>
-        <div className="forest-card p-6">
-          <h3 className="font-semibold text-[var(--grove)] mb-2">Deliverables</h3>
-          <p className="text-sm text-[var(--muted)]">Editable docs, prioritized gaps list, and a one‑hour walkthrough.</p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-12 md:py-16 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[var(--grove)]">Ready to move fast?</h2>
-        <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto">Schedule a 20‑minute intro or email us. We’ll confirm scope and timeline within one business day.</p>
+      {/* CTA Section */}
+      <section className="forest-card p-10 md:p-12 text-center mb-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-[var(--grove)] mb-4">
+          Ready to move fast?
+        </h2>
+        <p className="text-lg text-[var(--muted)] mb-8 max-w-2xl mx-auto">
+          Schedule a 20-minute intro or email us. We'll confirm scope and timeline within one business day.
+        </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a
             href="https://outlook.office.com/bookwithme/user/1a049f8f31714e3e8efdf1ab744ed4d3@groveline.ai/meetingtype/guwMtq7wYkSN_8DLpJ5j3Q2?anonymous&ismsaljsauthenabled&ep=mlink"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Schedule a 20‑minute Intro"
-            aria-describedby="doc-scope bundle-scope packs-scope"
-            className="inline-block px-8 py-4 text-lg rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity focus-visible:ring-2 focus-visible:ring-[var(--forest)]"
+            className="inline-block px-8 py-4 text-lg rounded-2xl forest-button-gradient text-white font-bold border border-[#1f4d20] hover:opacity-90 transition-opacity"
           >
-            Schedule a 20‑minute Intro
+            Schedule a 20-minute Intro
           </a>
           <a
             href="mailto:hello@groveline.ai"
-            aria-label="Email hello@groveline.ai"
-            className="inline-block px-8 py-4 text-lg rounded-2xl bg-white dark:bg-[var(--panel)] text-[#1d3a22] dark:text-[var(--ink)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors focus-visible:ring-2 focus-visible:ring-[var(--forest)]"
+            className="inline-block px-8 py-4 text-lg rounded-2xl bg-white dark:bg-[var(--panel)] text-[var(--grove)] border border-[var(--border)] font-semibold hover:bg-[#f0f7f0] dark:hover:bg-[#243a28] transition-colors"
           >
             Prefer email? hello@groveline.ai
           </a>
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div className="forest-card p-4 text-center">
-          <span className="text-sm font-semibold text-[var(--grove)]">300+ diligence reviews</span>
+      {/* Trust Badges */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        <div className="forest-card p-6 text-center">
+          <span className="text-lg font-bold text-[var(--grove)]">900+ ODD Reviews</span>
         </div>
-        <div className="forest-card p-4 text-center">
-          <span className="text-sm font-semibold text-[var(--grove)]">Fund launch operator</span>
+        <div className="forest-card p-6 text-center">
+          <span className="text-lg font-bold text-[var(--grove)]">Fund Launch Operator</span>
         </div>
-        <div className="forest-card p-4 text-center">
-          <span className="text-sm font-semibold text-[var(--grove)]">SEC/FINRA aware</span>
-        </div>
-      </section>
-
-      {/* Mini FAQ */}
-      <section className="mt-8 space-y-4">
-        <h3 className="text-xl font-bold text-[var(--grove)]">FAQ</h3>
-        <div className="forest-card p-4">
-          <p className="font-semibold text-[var(--ink)]">What’s the turnaround?</p>
-          <p className="text-sm text-[var(--muted)]">Most document prep items are 5–10 business days. Packs start immediately after scoping.</p>
-        </div>
-        <div className="forest-card p-4">
-          <p className="font-semibold text-[var(--ink)]">How do revisions work?</p>
-          <p className="text-sm text-[var(--muted)]">Two revisions within 14 days are included for fixed‑fee items. Packs include iterative updates as we ship.</p>
-        </div>
-        <div className="forest-card p-4">
-          <p className="font-semibold text-[var(--ink)]">What’s not included?</p>
-          <p className="text-sm text-[var(--muted)]">External vendor fees, filings, and legal opinions. We coordinate and integrate them into the plan.</p>
+        <div className="forest-card p-6 text-center">
+          <span className="text-lg font-bold text-[var(--grove)]">SEC/FINRA Aware</span>
         </div>
       </section>
 
-      {/* JSON‑LD Offers */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            itemListElement: [
-              { '@type': 'Product', name: 'DDQ Accelerator', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '1000', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Ops DD Lite', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '1500', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Policy Modernization', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '1500', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Mock LP Diligence Call', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '500', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Data Room Setup', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '500', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'ADV & Web Sweep', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '750', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Focused Pack (10h)', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '3000', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Growth Pack (30h)', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '9000', availability: 'https://schema.org/InStock' } },
-              { '@type': 'Product', name: 'Scale Pack (50h)', offers: { '@type': 'Offer', priceCurrency: 'USD', price: '15000', availability: 'https://schema.org/InStock' } },
-            ],
-          }),
-        }}
-      />
+      {/* FAQ */}
+      <section className="forest-card p-8 md:p-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-[var(--grove)] mb-8 text-center">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="space-y-6 max-w-3xl mx-auto">
+          <div className="pb-6 border-b border-[var(--border)]">
+            <h3 className="text-lg font-semibold text-[var(--grove)] mb-2">
+              What's the turnaround?
+            </h3>
+            <p className="text-[var(--muted)]">
+              Most document prep items are 5–10 business days. Growth and Institutional packages start immediately after scoping.
+            </p>
+          </div>
+
+          <div className="pb-6 border-b border-[var(--border)]">
+            <h3 className="text-lg font-semibold text-[var(--grove)] mb-2">
+              How do revisions work?
+            </h3>
+            <p className="text-[var(--muted)]">
+              Two revisions within 14 days are included for fixed-fee items. Growth and Institutional packages include iterative updates as we ship.
+            </p>
+          </div>
+
+          <div className="pb-6 border-b border-[var(--border)]">
+            <h3 className="text-lg font-semibold text-[var(--grove)] mb-2">
+              What's not included?
+            </h3>
+            <p className="text-[var(--muted)]">
+              External vendor fees, filings, and legal opinions. We coordinate and integrate them into the plan.
+            </p>
+          </div>
+
+          <div className="pb-6 border-b border-[var(--border)]">
+            <h3 className="text-lg font-semibold text-[var(--grove)] mb-2">
+              Can I switch tiers later?
+            </h3>
+            <p className="text-[var(--muted)]">
+              Absolutely. Start small and upgrade anytime as your needs evolve. We'll credit your initial investment toward the next tier.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-[var(--grove)] mb-2">
+              What if I just need one specific thing?
+            </h3>
+            <p className="text-[var(--muted)]">
+              Reach out and let's talk. We can scope custom work for specific deliverables like a DDQ refresh or mock LP call prep.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Back to Home */}
+      <div className="text-center mt-10">
+        <Link
+          href="/"
+          className="text-sm text-[var(--muted)] hover:text-[var(--forest)] transition-colors"
+        >
+          ← Back to Home
+        </Link>
+      </div>
     </div>
   );
 }
