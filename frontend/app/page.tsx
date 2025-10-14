@@ -16,7 +16,7 @@ export default function HomePage() {
         {/* Quick Stats Badges */}
         <div className="flex flex-wrap gap-3 justify-center mb-10">
           <span className="forest-badge text-sm">900+ ODD Reviews</span>
-          <span className="forest-badge text-sm">$150M+ Raised</span>
+          <span className="forest-badge text-sm">$450M+ Raised</span>
           <span className="forest-badge text-sm">Allocator-Ready</span>
           <span className="forest-badge text-sm">AI-Enhanced</span>
         </div>
