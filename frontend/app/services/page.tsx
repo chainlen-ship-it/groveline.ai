@@ -19,6 +19,50 @@ export default function ServicesPage() {
         </p>
       </header>
 
+      {/* Mission Section */}
+      <section className="forest-card p-8 md:p-10 mb-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--grove)] mb-6 text-center">
+            We're here to raise the bar, not your costs
+          </h2>
+          <p className="text-lg text-[var(--muted)] leading-relaxed mb-10 text-center">
+            Too many emerging managers get squeezed—paying BigLaw rates for boilerplate work, or cutting corners that create real risk. We've spent years in the trenches doing diligence, launching funds, and seeing what actually protects you. Our mission is simple: help you build institutional-grade infrastructure without institutional-grade fees. Better compliance shouldn't be a luxury.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-3">🛡️</div>
+              <h3 className="text-lg font-bold text-[var(--grove)] mb-2">
+                Risk Done Right
+              </h3>
+              <p className="text-sm text-[var(--muted)]">
+                Real protection, not checkbox compliance
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-4xl mb-3">💡</div>
+              <h3 className="text-lg font-bold text-[var(--grove)] mb-2">
+                Industry Elevation
+              </h3>
+              <p className="text-sm text-[var(--muted)]">
+                Raising standards for everyone
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-4xl mb-3">⚖️</div>
+              <h3 className="text-lg font-bold text-[var(--grove)] mb-2">
+                Cost Control
+              </h3>
+              <p className="text-sm text-[var(--muted)]">
+                Sophisticated work, sensible pricing
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tiers */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
         {/* Tier 1: Launch Ready */}
