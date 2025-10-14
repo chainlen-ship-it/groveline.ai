@@ -26,6 +26,7 @@ echo "📦 Copying exported files to repo root…"
 cd ..
 
 # Copy files manually to preserve important root files
+rm -rf _next
 cp -r frontend/out/_next .
 cp -r frontend/out/assets .
 cp -r frontend/out/case-studies .

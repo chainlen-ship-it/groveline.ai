@@ -8,11 +8,12 @@ node_modules/
 # pnpm-lock.yaml
 # yarn.lock
 
-# Next.js (build + dev)
+# Next.js
+# Ignore dev/build cache, but DO track exported assets under repo root
 .next/
-_next/
 frontend/.next/
 frontend/out/
+# Note: DO NOT ignore `/_next` at repo root — it contains static export assets for GitHub Pages
 
 # GitHub Pages worktree (if you use it)
 .gh-pages-worktree/
