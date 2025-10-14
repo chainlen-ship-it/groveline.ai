@@ -26,7 +26,7 @@ export default function ServicesPage() {
             We're here to raise the bar, not your costs
           </h2>
           <p className="text-lg text-[var(--muted)] leading-relaxed mb-10 text-center">
-            Too many emerging managers get squeezed—paying BigLaw rates for boilerplate work, or cutting corners that create real risk. We've spent years in the trenches doing diligence, launching funds, and seeing what actually protects you. Our mission is simple: help you build institutional-grade infrastructure without institutional-grade fees. Better compliance shouldn't be a luxury.
+            Too many emerging to mid-tier managers get squeezed—paying Big Service Provider rates for boilerplate solutions, or cutting corners that create real risk. We've spent years in the trenches doing diligence, launching funds, and seeing what actually protects you. Our mission is simple: help you build institutional-grade infrastructure with right-sized fees. Better infrastructure shouldn't be a luxury.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -75,7 +75,7 @@ export default function ServicesPage() {
             Everything you need to get to market fast
           </p>
           <div className="mb-2">
-            <span className="text-4xl font-bold text-[var(--grove)]">$3K–$8K</span>
+            <span className="text-4xl font-bold text-[var(--grove)]">$1K–$3K</span>
           </div>
           <p className="text-sm text-[var(--muted)] mb-6">One-time project</p>
 
@@ -111,43 +111,43 @@ export default function ServicesPage() {
         </div>
 
         {/* Tier 2: Growth Partner (Popular) */}
-        <div className="forest-card p-8 flex flex-col bg-gradient-to-br from-[#3d6b3d] to-[#4a7c4a] text-white transform md:scale-105 hover:shadow-2xl transition-all relative">
+        <div className="forest-card p-8 flex flex-col bg-gradient-to-br from-[#3d6b3d] to-[#4a7c4a] transform md:scale-105 hover:shadow-2xl transition-all relative">
           <span className="inline-block px-3 py-1 rounded-full bg-yellow-400 text-[#2d4a2d] text-xs font-semibold uppercase tracking-wide mb-4">
             Perfect for: Capital Raising
           </span>
-          <h3 className="text-2xl font-bold mb-3">Growth Partner</h3>
-          <p className="mb-6 opacity-90">
+          <h3 className="text-2xl font-bold mb-3 text-white">Growth Partner</h3>
+          <p className="mb-6 text-white opacity-90">
             Complete infrastructure plus ongoing support
           </p>
           <div className="mb-2">
-            <span className="text-4xl font-bold">$12K–$18K</span>
+            <span className="text-4xl font-bold text-white">$12K–$18K</span>
           </div>
-          <p className="text-sm opacity-75 mb-6">Initial setup + 3-6 months support</p>
+          <p className="text-sm text-white opacity-75 mb-6">Initial setup + 3-6 months support</p>
 
           <ul className="space-y-3 mb-8 flex-grow">
             <li className="flex items-start gap-3">
               <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
-              <span>Everything in Launch Ready</span>
+              <span className="text-white">Everything in Launch Ready</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
-              <span>Advanced LP management systems</span>
+              <span className="text-white">Advanced LP management systems</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
-              <span>Quarterly compliance updates</span>
+              <span className="text-white">Quarterly compliance updates</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
-              <span>Priority response times</span>
+              <span className="text-white">Priority response times</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
-              <span>Strategic advisory calls</span>
+              <span className="text-white">Strategic advisory calls</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-yellow-400 font-bold text-lg mt-0.5">✓</span>
-              <span>Due diligence preparation</span>
+              <span className="text-white">Due diligence preparation</span>
             </li>
           </ul>
 
