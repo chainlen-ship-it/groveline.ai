@@ -1,38 +1,54 @@
-# Dependencies
+# Node / package managers
 node_modules/
-/.pnp
+.pnp/
 .pnp.js
+*.tsbuildinfo
+# lockfiles: keep exactly one; comment out the others
+# package-lock.json
+# pnpm-lock.yaml
+# yarn.lock
 
-# Testing
-/coverage
-
-# Next.js
+# Next.js (build + dev)
+.next/
+_next/
 frontend/.next/
 frontend/out/
 
-# Production
-/build
-/dist
+# GitHub Pages worktree (if you use it)
+.gh-pages-worktree/
 
-# Misc
-.DS_Store
-*.pem
+# Builds / dist
+/build/
+dist/
 
-# Debug
+# Logs / coverage / caches
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+coverage/
+.eslintcache
+.stylelintcache
+.turbo/
+.cache/
 
-# Local env files
-.env*.local
+# Env / secrets
 .env
+.env*.local
 
 # Vercel
-.vercel
+.vercel/
 
-# TypeScript
-*.tsbuildinfo
-next-env.d.ts
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Lock files (optional - keep package-lock.json if you prefer)
-# package-lock.json
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Misc
+*.pem
+docs/old/

@@ -111,7 +111,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Tier 2: Growth Partner (Popular) */}
-        <div className="forest-card p-8 flex flex-col bg-gradient-to-br from-[#3d6b3d] to-[#4a7c4a] transform md:scale-105 hover:shadow-2xl transition-all relative">
+        <div className="forest-card !bg-gradient-to-br from-[#3d6b3d] to-[#4a7c4a] p-8 flex flex-col transform md:scale-105 hover:shadow-2xl transition-all relative">
           <span className="inline-block px-3 py-1 rounded-full bg-yellow-400 text-[#2d4a2d] text-xs font-semibold uppercase tracking-wide mb-4">
             Perfect for: Capital Raising
           </span>
