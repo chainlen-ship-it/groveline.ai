@@ -22,18 +22,14 @@ if [ ! -d out ]; then
   exit 1
 fi
 
-echo "📦 Copying exported files to repo root…"
+echo "📦 Syncing exported files to repo root…"
 cd ..
 
-# Copy files manually to preserve important root files
-rm -rf _next
-cp -r frontend/out/_next .
-cp -r frontend/out/assets .
-cp -r frontend/out/case-studies .
-cp frontend/out/*.html .
-cp frontend/out/*.txt .
-cp frontend/out/robots.txt .
-cp frontend/out/sitemap.xml .
+# Remove old exported dirs to avoid stale chunks/routes
+rm -rf _next assets case-studies assessment assessment2 login privacy terms services
+
+# Copy everything from out to root (keeps code in /frontend untouched)
+cp -r frontend/out/* .
 
 # Keep custom domain and disable Jekyll on GH Pages
 echo "groveline.ai" > CNAME
